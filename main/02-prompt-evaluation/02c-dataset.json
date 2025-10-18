@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that extracts the AWS account ID from an ARN string. The function should take an ARN like 'arn:aws:s3:::my-bucket' or 'arn:aws:ec2:us-east-1:123456789012:instance/i-1234567890abcdef0' and return the account ID if present, or None if the ARN doesn't contain one."
+  },
+  {
+    "task": "Write a regex pattern that matches valid AWS S3 bucket names. S3 bucket names must be 3-63 characters long, contain only lowercase letters, numbers, hyphens, and periods, start with a letter or number, and cannot end with a hyphen."
+  },
+  {
+    "task": "Write a Python function that parses an AWS CloudWatch Logs JSON log entry and extracts the timestamp, message, and log level (if available). The function should handle nested JSON structures and return a dictionary with these fields or raise an error if the entry is malformed."
+  }
+]
