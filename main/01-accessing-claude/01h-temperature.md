@@ -8,7 +8,7 @@
 - 预测 Prediction：计算下一个可能 Token 的概率
 - 采样 Sampling：基于概率以一定准则选择一个 Token
 
-![img](./01h-temperature.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623338%2F03_-_008_-_Temperature_00.1748623338635.png)
+![img](./01h-temperature.assets/1.png)
 
 温度是一个介于 0 和 1 之间的数值，影响采样阶段的选择。在低温（接近 0）时，Claude 变得非常确定性——它几乎总是选择概率最高的标记；在高温（接近 1）时，Claude 将概率更均匀地分布在选项上，导致输出更多样化和富有创造力。
 
@@ -20,5 +20,4 @@
 | 中温 0.4~0.7 | 总结文本、解决问题、有约束条件的创意写作 |
 | 高温 0.8~1.0 | 头脑风暴、营销内容、创意写作             |
 
-在 Claude SDK 中，给 `create` 函数传递 `temperature` 参数即可指定温度，目前的默认温度是 1.0。我们在 [01h.ipynb](./01h.ipynb) 中实现了对应的逻辑并比较了不同温度设定下的表现。需要注意的是，高温度并不总能保证多样的输出，例如一些绝对事实的问题仍然会倾向于产生相似的响应。
-
+在 Claude SDK 中，给 `create` 函数传递 `temperature` 参数即可指定温度，目前的默认温度是 1.0。我们在 [01h.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01h.ipynb) 中实现了对应的逻辑并比较了不同温度设定下的表现。需要注意的是，高温度并不总能保证多样的输出，例如一些绝对事实的问题仍然会倾向于产生相似的响应。

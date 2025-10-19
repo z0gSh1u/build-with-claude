@@ -6,7 +6,7 @@
 
 开启 streaming 后，Claude 会先返回一个初始响应，表明已收到请求并开始生成文本，随后会收到一系列事件，每一个事件包含完整响应的一部分。
 
-![img](./01j-streaming.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623338%2F03_-_009_-_Response_Streaming_03.1748623338384.png)
+![img](./01j-streaming.assets/1.png)
 
 Claude 发送回的几类事件包括：
 
@@ -17,11 +17,11 @@ Claude 发送回的几类事件包括：
 - MessageDelta：当前消息完成
 - MessageStop：当前消息结束
 
-![img](./01j-streaming.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623339%2F03_-_009_-_Response_Streaming_11.1748623339633.png)
+![img](./01j-streaming.assets/2.png)
 
 ## 使用流式响应
 
-在 `create` 函数中添加 `stream=True` 参数即可，此时返回变为 stream 而非 message。我们在 [01j.ipynb](./01j.ipynb) 中实现了这部分逻辑。
+在 `create` 函数中添加 `stream=True` 参数即可，此时返回变为 stream 而非 message。我们在 [01j.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01j.ipynb) 中实现了这部分逻辑。
 
 ```python
 # 请求
@@ -57,4 +57,3 @@ final_message = stream.get_final_message()
 ```
 
 这允许你对完整消息进行存储或者其他处理，而流式的 chunk 用于即时反馈的 UI 展示。
-

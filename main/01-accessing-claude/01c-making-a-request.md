@@ -12,7 +12,7 @@ BASE_URL="https://somewhere.com/v1"
 jupyter notebook .
 ```
 
-请结合 [01c.ipynb](./01c.ipynb) 阅读后续的内容。
+请结合 [01c.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01c.ipynb) 阅读后续的内容。
 
 ## `create` 函数
 
@@ -79,4 +79,3 @@ message = client.messages.create(
 ```
 
 这些 Token 在当前模型下大概要花掉 0.005 RMB。而你也已经以这样简单的方式，正式进入了与 Claude 交互的魔法世界。
-

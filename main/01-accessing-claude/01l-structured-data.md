@@ -49,7 +49,7 @@ text = chat(messages, stop_sequences=["```"])
 }
 ```
 
-这个例子实现在 [01l.ipynb](./01l.ipynb) 中。
+这个例子实现在 [01l.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01l.ipynb) 中。
 
 ## 举一反三
 

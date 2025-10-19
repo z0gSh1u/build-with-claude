@@ -6,7 +6,7 @@ Claude 还支持一种特殊的提示词，称为“系统提示词”（system 
 
 ## 一个例子
 
-![img](./01f-system-prompt.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623273%2F03_-_006_-_System_Prompts_05.1748623273817.png)
+![img](./01f-system-prompt.assets/1.png)
 
 假设我们正在构造数学辅导 Chatbot，你希望 Claude 表现得像一个真正的辅导老师，而不仅仅是吐出答案。即应该：
 
@@ -16,7 +16,7 @@ Claude 还支持一种特殊的提示词，称为“系统提示词”（system 
 
 而不是立即给出直接答案或告诉学生只需使用计算器。
 
-类似这样的对 Claude 的原则性指导或者角色预设，适合添加到系统提示词中，通过 `system` 参数传递给 `create` 函数。我们在 [01f.ipynb](./01f.ipynb) 中实现了这一逻辑，并对比了有无系统提示词时的响应：
+类似这样的对 Claude 的原则性指导或者角色预设，适合添加到系统提示词中，通过 `system` 参数传递给 `create` 函数。我们在 [01f.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01f.ipynb) 中实现了这一逻辑，并对比了有无系统提示词时的响应：
 
 - 没有系统提示词时，Claude 会立即给出完整的逐步解决方案，但它不会鼓励学生自己思考问题
 - 使用数学辅导系统提示词时，Claude 不再提供完整解决方案，而是提出引导性问题，鼓励学生逐步思考

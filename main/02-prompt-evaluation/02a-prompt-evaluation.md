@@ -5,7 +5,7 @@
 - 提示词工程：帮助你写出更好的提示词
 - 提示词评估：帮助你衡量提示词的实际效果
 
-![img](./02a-prompt-evaluation.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623381%2F04_-_001_-_Prompt_Evaluation_00.1748623381094.png)
+![img](./02a-prompt-evaluation.assets/1.png)
 
 ## 提示词工程和提示词评估
 
@@ -26,7 +26,7 @@
 
 ## 为什么需要提示词评估
 
-![img](./02a-prompt-evaluation.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623382%2F04_-_001_-_Prompt_Evaluation_10.1748623382207.png)
+![img](./02a-prompt-evaluation.assets/2.png)
 
 在写完一个提示词后，有三种选择：
 

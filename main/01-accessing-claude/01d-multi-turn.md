@@ -11,4 +11,4 @@
 - 将下一条 User Message 继续添加到 messages
 - 将 messages 整个发送给 Claude 获取下一条 Assistant Message，以此类推
 
-我们在 [01d.ipynb](./01d.ipynb) 中实现了这个逻辑。你可以看到 Claude 明白我们的第二个用户消息“写另一句话”是指扩展量子计算的定义，因为你提供了完整的对话上下文。
+我们在 [01d.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01d.ipynb) 中实现了这个逻辑。你可以看到 Claude 明白我们的第二个用户消息“写另一句话”是指扩展量子计算的定义，因为你提供了完整的对话上下文。

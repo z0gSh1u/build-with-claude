@@ -2,7 +2,7 @@
 
 一个典型的提示词评估流程主要包括五个关键步骤。安排这些流程的方式有很多，也有各种各样的开源和付费根据能协助你，本教程意在帮助你理解核心流程，从而在有需要时可以按需扩展。
 
-![img](./02b-typical-eval-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623388%2F04_-_002_-_A_Typical_Eval_Workflow_00.1748623388621.png)
+![img](./02b-typical-eval-workflow.assets/1.png)
 
 ## 起草提示词
 
@@ -28,7 +28,7 @@ How far away is the Moon?
 
 ## 让 Claude 回答
 
-对每个数据记录，拼接出完整的提示词，发送给 Claude 获取响应。代码实现在 [02b.ipynb](./02b.ipynb)。
+对每个数据记录，拼接出完整的提示词，发送给 Claude 获取响应。代码实现在 [02b.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02b.ipynb)。
 
 ## 通过评分器
 
@@ -50,7 +50,6 @@ Answer the question with ample detail
 """
 ```
 
-![img](./02b-typical-eval-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623393%2F04_-_002_-_A_Typical_Eval_Workflow_17.1748623393804.png)
+![img](./02b-typical-eval-workflow.assets/2.png)
 
 这种系统化的方法消除了提示词工程中的尝试性猜测，并让你确信修改实际上起到了改进，而不是仅仅在生成不同的输出。
-

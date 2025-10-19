@@ -13,7 +13,7 @@
 
 例如下面的例子，我们预设了“咖啡更好，因为…”的开头，则 Claude 将转为解释咖啡更好的原因，而不是纠结茶和咖啡作为早餐的各自优劣。这在某种意义上限制了 Claude 的生成空间，从而能朝特定方向前进，输出更受控的内容。
 
-![img](./01k-control-output.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623336%2F03_-_010_-_Controlling_Model_Output_05.1748623336281.png)
+![img](./01k-control-output.assets/1.png)
 
 用代码可以表示为：
 
@@ -45,7 +45,4 @@ answer = chat(messages, stop_sequences=["5"])
 - 让回复采取特定立场
 - 结构化输出：结合这两种技术来生成符合特定模板的回应
 
-其中结构化输出是非常重要的能力，我们将在后面的内容中讨论。本节的内容在 [01k.ipynb](./01k.ipynb) 中实现。
-
-
-
+其中结构化输出是非常重要的能力，我们将在后面的内容中讨论。本节的内容在 [01k.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01k.ipynb) 中实现。

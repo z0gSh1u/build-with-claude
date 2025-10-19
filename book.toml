@@ -7,4 +7,8 @@ title = "用 Claude 构建应用"
 [output.html]
 git-repository-url = "https://github.com/z0gSh1u/build-with-claude"
 git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/z0gSh1u/build-with-claude/edit/master/main/{path}"
+edit-url-template = "https://github.com/z0gSh1u/build-with-claude/edit/master/{path}"
+additional-js = ["ga.js"]
+
+[output.html.print]
+enabled = false
