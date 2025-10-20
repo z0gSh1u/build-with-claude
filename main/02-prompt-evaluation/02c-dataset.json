@@ -1,11 +1,11 @@
 [
   {
-    "task": "Write a Python function that extracts the AWS account ID from an ARN string. The function should take an ARN like 'arn:aws:s3:::my-bucket' or 'arn:aws:ec2:us-east-1:123456789012:instance/i-1234567890abcdef0' and return the account ID if present, or None if the ARN doesn't contain one."
+    "task": "Write a Python function that extracts the AWS region from an S3 bucket ARN string. For example, 'arn:aws:s3:::my-bucket' should return None, and 'arn:aws:s3:us-east-1:123456789012:bucket/my-bucket' should return 'us-east-1'."
   },
   {
-    "task": "Write a regex pattern that matches valid AWS S3 bucket names. S3 bucket names must be 3-63 characters long, contain only lowercase letters, numbers, hyphens, and periods, start with a letter or number, and cannot end with a hyphen."
+    "task": "Create a JSON object that represents an AWS IAM policy allowing a principal to perform s3:GetObject and s3:PutObject actions on a specific S3 bucket ARN (arn:aws:s3:::my-app-bucket/*)."
   },
   {
-    "task": "Write a Python function that parses an AWS CloudWatch Logs JSON log entry and extracts the timestamp, message, and log level (if available). The function should handle nested JSON structures and return a dictionary with these fields or raise an error if the entry is malformed."
+    "task": "Write a Regex pattern that matches valid AWS EC2 instance IDs. Instance IDs follow the format 'i-' followed by exactly 17 hexadecimal characters (example: i-0a1b2c3d4e5f6g7h8)."
   }
 ]

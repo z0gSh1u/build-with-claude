@@ -19,9 +19,9 @@
 - [结构化数据练习](01-accessing-claude/01m-structured-data-exercise.md)
 - [小测验](01-accessing-claude/01n-quiz.md)
 
-# 提示词评估介绍
+# 提示词评估
 
-- [提示词评估](02-prompt-evaluation/02a-prompt-evaluation.md)
+- [提示词评估介绍](02-prompt-evaluation/02a-prompt-evaluation.md)
 - [典型的评估流程](02-prompt-evaluation/02b-typical-eval-workflow.md)
 - [生成测试数据集](02-prompt-evaluation/02c-gen-test-set.md)
 - [运行评测](02-prompt-evaluation/02d-run-eval.md)

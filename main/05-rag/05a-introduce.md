@@ -1,1 +1,59 @@
 # 05a - 检索增强生成简介
+
+检索增强生成（RAG）是一种处理因过大而无法放入单个提示词中的文档的技术。它将文档拆分为多个片段，并在回答时只包含最相关的部分。
+
+## 大型文档带来的问题
+
+提示词中可以包含的文本量是有限的。例如，有一份 800 页的财务文档，并想就特定问题“这家公司有哪些风险因素？”提问的情况。
+
+### 方法1：在提示词中包含所有内容
+
+从文档中提取所有文本，并于用户问题一起放到提示词中，例如：
+
+```
+Answer the user's question about the financial document.
+
+<user_question>
+{user_question}
+</user_question>
+
+<financial_document>
+{financial_document}
+</financial_document>
+```
+
+![img](./05a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542175%2F07_-_001_-_Introducing_Retrieval_Augmented_Generation_05.1748542174970.jpg)
+
+该方法存在严重的局限性：
+
+- 提示词长度有限制，文档可能过长
+- 当提示词很长时，Claude 的效果会变差
+- 更长的提示词会带来更高 Token 消耗，增加处理成本
+- 更长的提示词需要更多时间来响应
+
+### 方法2：将文档拆分为块
+
+RAG 采用更聪明的方法。首先在预处理时将文档拆分成小块，然后当用户提问时找到与问题最相关的块，并仅将这些块包含在提示词中。
+
+例如，如果有人问“这家公司面临哪些风险？”，RAG 会在文本片段中找到“风险因素”部分，并在提示词中只包含这个相关的片段。
+
+![img](./05a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542175%2F07_-_001_-_Introducing_Retrieval_Augmented_Generation_09.1748542175794.jpg)
+
+## RAG 的优势和挑战
+
+优势：
+
+- 让 Claude 可以专注于最相关的内容
+- 可扩展到非常大的文档
+- 支持多文档
+- 更少的 Token 成本，且运行更快
+
+挑战：
+
+- 需要预处理步骤
+- 需要一个找到“相关”的片段的搜索机制
+- 包含的片段可能不包含 Claude 需要的所有上下文
+- 有很多种文本分块的方法需要权衡选用，例如将文档分成等大小的部分，或者根据文档结构（如标题和章节）来分段
+
+RAG 涉及许多技术决策，比简单地将所有内容包含在提示词中需要更多的工作量。在处理非常大的文档、多个文档，或者需要优化成本和性能时，它尤其有价值。但记得评估你的收益是否超过了 RAG 的复杂性。
+
