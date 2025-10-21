@@ -1,0 +1,17 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "72 kg",
+      "goal": "Marathon training with morning 10km run, afternoon 8km tempo run, and evening 5km easy run",
+      "restrictions": "Vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three training sessions with appropriate pre/during/post-workout nutrition timing",
+      "Total daily carbohydrates are high (minimum 8-10g per kg body weight) to support endurance training",
+      "Plan is compact and fits within one day with realistic, practical meals"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a endurance athlete (marathon runner) requiring high carbohydrate intake and specific pre/during/post-workout nutrition timing across morning, afternoon, and evening training sessions"
+  }
+]

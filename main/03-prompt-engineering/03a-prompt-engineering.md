@@ -22,7 +22,9 @@
 
 为了演示提示词工程过程，本节以一个例子任务进行操作：
 
-*创建一个生成运动员一日饮食计划的提示词。需要考虑运动员的身高、体重、目标和饮食限制，然后生成一个全面的饮食计划。*
+```
+创建一个生成运动员一日饮食计划的提示词。需要考虑运动员的身高、体重、目标和饮食限制，然后生成一个全面的饮食计划。
+```
 
 如下图所示：
 
@@ -35,30 +37,20 @@
 evaluator = PromptEvaluator(max_concurrent_tasks=5)
 # 生成评测集
 dataset = evaluator.generate_dataset(
-    task_description="Write a compact, concise 1 day meal plan for a single athlete",
-    prompt_inputs_spec={
-        "height": "Athlete's height in cm",
-        "weight": "Athlete's weight in kg", 
-        "goal": "Goal of the athlete",
-        "restrictions": "Dietary restrictions of the athlete"
-    },
+    task_description="...",
+    prompt_inputs_spec={...},
     output_file="dataset.json",
-    num_cases=3
+    num_cases=...
 )
 # 运行评测
 results = evaluator.run_evaluation(
     run_prompt_function=run_prompt,
     dataset_file="dataset.json",
-    extra_criteria="""
-The output should include:
-- Daily caloric total
-- Macronutrient breakdown  
-- Meals with exact foods, portions, and timing
-"""
+    extra_criteria="..."
 )
 ```
 
-我们一开始的提示词：
+我们一开始的提示词长这样：
 
 ```python
 def run_prompt(prompt_inputs):
@@ -76,11 +68,26 @@ What should this person eat?
     return chat(messages)
 ```
 
-如下图所示：
+这是我们优化的基线。现在我们添加评测标准：
+
+```python
+results = evaluator.run_evaluation(
+    run_prompt_function=run_prompt,
+    dataset_file="dataset.json",
+    extra_criteria="""
+The output should include:
+- Daily caloric total
+- Macronutrient breakdown  
+- Meals with exact foods, portions, and timing
+"""
+)
+```
+
+即根据用例中重要的具体要求进行评测。基于提供的框架运行评测后，将生成一个具体的评测报告，展示了每个用例的具体表现以及每个分数的推理过程。如下图所示，我们一开始的分数大概是 2.3 分：
 
 ![img](./03a-prompt-engineering.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623586%2F05_-_001_-_Prompt_Engineering_18.1748623586518.png)
 
-
+在建立了基准后，就可以开始应用具体的提示词工程技术了。提示词工程是一个迭代的过程。关键是一次只做一个改变，评估其影响，并在有效的部分上继续改进。
 
 
 

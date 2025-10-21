@@ -76,7 +76,7 @@
 - [PDF 理解](06-claude-features/06c-pdf.md)
 - [引用](06-claude-features/06d-citation.md)
 - [提示词缓存](06-claude-features/06e-prompt-cache.md)
-- [缓存规则](06-claude-features/06f-rules-of-cache.md)
+- [提示词缓存的规则](06-claude-features/06f-rules-of-cache.md)
 - [缓存实践](06-claude-features/06g-cache-in-action.md)
 - [代码执行与文件 API](06-claude-features/06h-code-exec-and-files-api.md)
 - [小测验](06-claude-features/06i-quiz.md)
