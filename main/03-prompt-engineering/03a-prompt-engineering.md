@@ -2,7 +2,7 @@
 
 提示词工程是改进提示词，以获得更可靠、更高质量的输出的过程。从基本的提示词开始，评估其性能，然后系统地应用工程技术来改进它。
 
-![img](./03a-prompt-engineering.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623584%2F05_-_001_-_Prompt_Engineering_00.1748623584369.png)
+![img](./03a-prompt-engineering.assets/1.png)
 
 ## 迭代式的改进过程
 
@@ -16,7 +16,7 @@
 
 开发者反复重复最后两个步骤，直到对性能满意为止。
 
-![img](./03a-prompt-engineering.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623585%2F05_-_001_-_Prompt_Engineering_01.1748623585186.png)
+![img](./03a-prompt-engineering.assets/2.png)
 
 ## 一个例子
 
@@ -28,7 +28,7 @@
 
 如下图所示：
 
-![img](./03a-prompt-engineering.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623586%2F05_-_001_-_Prompt_Engineering_04.1748623585977.png)
+![img](./03a-prompt-engineering.assets/3.png)
 
 本节的代码在 [03a.ipynb](./03a.ipynb)，其中提供了一个 `PromptEvaluator` 类来处理数据集生成和模型评分，用法如下：
 
@@ -62,7 +62,7 @@ What should this person eat?
 - Goal: {prompt_inputs["goal"]}
 - Dietary restrictions: {prompt_inputs["restrictions"]}
 """
-    
+
     messages = []
     add_user_message(messages, prompt)
     return chat(messages)
@@ -77,7 +77,7 @@ results = evaluator.run_evaluation(
     extra_criteria="""
 The output should include:
 - Daily caloric total
-- Macronutrient breakdown  
+- Macronutrient breakdown
 - Meals with exact foods, portions, and timing
 """
 )
@@ -85,7 +85,6 @@ The output should include:
 
 即根据用例中重要的具体要求进行评测。基于提供的框架运行评测后，将生成一个具体的评测报告，展示了每个用例的具体表现以及每个分数的推理过程。如下图所示，我们一开始的分数大概是 2.3 分：
 
-![img](./03a-prompt-engineering.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623586%2F05_-_001_-_Prompt_Engineering_18.1748623586518.png)
+![img](./03a-prompt-engineering.assets/4.png)
 
 在建立了基准后，就可以开始应用具体的提示词工程技术了。提示词工程是一个迭代的过程。关键是一次只做一个改变，评估其影响，并在有效的部分上继续改进。
-

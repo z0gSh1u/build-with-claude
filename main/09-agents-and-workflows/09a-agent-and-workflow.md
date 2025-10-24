@@ -8,7 +8,7 @@ Agent 和工作流是用于处理无法通过单个请求完成的用户任务�
 
 Agent 为 Claude 设定一个目标并提供一套工具，期望 Claude 自己找出如何完成目标。因此，当你不确定向 Claude 提供什么任务或任务参数时，使用 Agent。
 
-![img](./09a-agent-and-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543103%2F11_-_001_-_Agents_and_Workflows_01.1748543103044.jpg)
+![img](./09a-agent-and-workflow.assets/1.jpg)
 
 ## 一个工作流的例子
 
@@ -21,7 +21,7 @@ Agent 为 Claude 设定一个目标并提供一套工具，期望 Claude 自己�
 - 创建一个 Rendering
 - 让 Claude 根据原始图像对渲染结果评分，如果有问题则修复
 
-![img](./09a-agent-and-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543103%2F11_-_001_-_Agents_and_Workflows_06.1748543103613.jpg)
+![img](./09a-agent-and-workflow.assets/2.jpg)
 
 这个工作流实际上遵循了“评估-优化”模式，这是一个效果很好的工作流模式：
 
@@ -30,7 +30,4 @@ Agent 为 Claude 设定一个目标并提供一套工具，期望 Claude 自己�
 - 反馈回路 Feedback Loop：如果 Grader 不接受输出，反馈给 Producer 要求改进
 - 迭代 Iteration：反复执行反馈回路，直到评分者接受输出
 
-![img](./09a-agent-and-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543104%2F11_-_001_-_Agents_and_Workflows_15.1748543104283.jpg)
-
-
-
+![img](./09a-agent-and-workflow.assets/3.jpg)

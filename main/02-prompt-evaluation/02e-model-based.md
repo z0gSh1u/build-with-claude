@@ -20,7 +20,7 @@
 
 前两个标准与基于代码的打分器配合良好，而任务遵循则更适合基于模型的打分器。
 
-![img](./02e-model-based.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623453%2F04_-_005_-_Model_Based_Grading_07.1748623453532.png)
+![img](./02e-model-based.assets/1.png)
 
 ## 实现基于模型的打分器
 

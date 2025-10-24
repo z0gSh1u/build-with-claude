@@ -12,7 +12,7 @@
 分析图像中的零件，然后在金属、聚合物、陶瓷、复合材料、弹性体或木材中选择一种制造它的最佳材料
 ```
 
-![img](./09b-parallel-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543069%2F11_-_002_-_Parallelization_Workflows_02.1748543069350.jpg)
+![img](./09b-parallel-workflow.assets/1.jpg)
 
 虽然这种方法可能有效，但 Claude 要在单个请求中承担大量工作，并且缺少专业知识，结果可能不会像预期中那样可靠。
 
@@ -34,12 +34,12 @@
 
 聚合物标准：
 以下是判断该零件是否应该用聚合物制造的标准：
-...（省略成百上千字） 
+...（省略成百上千字）
 ```
 
 但这会引发一个新问题 —— Claude 必须同时考虑这些不同因素，可能造成混淆和次优结果。
 
-![img](./09b-parallel-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543069%2F11_-_002_-_Parallelization_Workflows_06.1748543069782.jpg)
+![img](./09b-parallel-workflow.assets/2.jpg)
 
 ## 并行式的改进
 
@@ -50,11 +50,11 @@
 - Claude 每次独立评估该材料适用于该零件的程度
 - 收集所有分析结果
 
-![img](./09b-parallel-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543070%2F11_-_002_-_Parallelization_Workflows_09.1748543070332.jpg)
+![img](./09b-parallel-workflow.assets/3.jpg)
 
 - 最后一步，将所有单独分析结果再次发送回 Claude，让它比较这些结果并做出最终推荐
 
-![img](./09b-parallel-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543070%2F11_-_002_-_Parallelization_Workflows_11.1748543070706.jpg)
+![img](./09b-parallel-workflow.assets/4.jpg)
 
 ## 并行式工作流如何工作
 
@@ -66,7 +66,7 @@
 
 子任务不必完全相同，每个任务都可以有专门的提示词、工具集或评测标准。
 
-![img](./09b-parallel-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543071%2F11_-_002_-_Parallelization_Workflows_15.1748543071284.jpg)
+![img](./09b-parallel-workflow.assets/5.jpg)
 
 并行式工作流提供了几个关键优势：
 
@@ -78,10 +78,3 @@
 当你可以将复杂的决策拆解为独立的评估时，例如需要 Claude 考虑多个标准、比较多个选项，或涉及不同专业领域决策的情况，则很适合使用并行式工作流。
 
 关键在于识别可以有意义地分离的任务，每个子任务都应该可以独立运行，并为最终决策贡献一部分分析。
-
-
-
-
-
-
-

@@ -6,13 +6,13 @@
 
 以一个分析 20 页销售记录的提示词为例，如果没有清晰的界限，Claude 难以区分你的指令和实际想要分析的数据。通过将销售记录包裹在 `<sales_records>...</sales_records>` 等 XML 标签中，提供了清晰的分隔符，有助于 Claude 理解提示词的结构。
 
-![img](./03d-xml-tag.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623569%2F05_-_004_-_Structure_with_XML_Tags_06.1748623569098.png)
+![img](./03d-xml-tag.assets/1.png)
 
 ## 一个例子
 
 这是一个更明显的例子。如果让 Claude 使用提供的文档来调试代码，将所有内容混在一起会造成混淆：
 
-![img](./03d-xml-tag.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623570%2F05_-_004_-_Structure_with_XML_Tags_10.1748623569882.png)
+![img](./03d-xml-tag.assets/2.png)
 
 由于代码片段也存在类似于段落的结构，左边的版本几乎无法区分代码和文档。右边的版本则使用 `<my_code>` 和 `<docs>` 标签来创建清晰的界限。
 
@@ -51,4 +51,3 @@ XML 标签在以下情况很有用：
 这使得提示词非常明确：身高、体重、目标和限制都是与运动员相关的数据，在生成饮食计划时应综合考虑。
 
 随着提示词变得越来越复杂，并包含更多样化的内容，XML 标签的使用价值会越来越高。
-

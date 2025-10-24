@@ -7,14 +7,14 @@
 
 对于语法验证，可以针对不同的输出类型（如 JSON、Python 代码、Regex）设计不同的校验器。每个校验器尝试将结果按格式解析，如果解析成功，可以返回 10 分，否则返回 0 分。
 
-![img](./02f-code-based.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623445%2F04_-_006_-_Code_Based_Grading_02.1748623445106.png)
+![img](./02f-code-based.assets/1.png)
 
 可以通过将期望输出类型附加到数据集的项目中来表明选用何种校验器：
 
 ```json
 {
-    "task": "Create a Python function to validate an AWS IAM username",
-    "format": "python"
+  "task": "Create a Python function to validate an AWS IAM username",
+  "format": "python"
 }
 ```
 
@@ -25,10 +25,3 @@
 最后，我们可以将基于代码的打分和基于模型的打分按一定权重合并，权重分配体现了内容质量和技术正确性之间的权衡。
 
 总的来说，提示词评估流程为你提供了一种量化的方法来衡量提示词工程的进度，而不是依赖主观评估。
-
-
-
-
-
-
-

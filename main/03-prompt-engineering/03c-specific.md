@@ -2,13 +2,13 @@
 
 另一个优化结果的有效方法是明确你想要什么。与其将一切交给模型的理解，你可以提供清晰的 Guideline 或步骤，引导 Claude 朝着期望方向前进。
 
-![img](./03c-specific.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623570%2F05_-_003_-_Being_Specific_00.1748623570613.png)
+![img](./03c-specific.assets/1.png)
 
 例如，如果仅仅是一句简单的提示词“写一个关于一个发现隐藏才能的角色的小故事”，则 Claude 可能会走向无数方向，例如字数从几百到几千，总角色数从一到 N，等等。如果有清晰的 Guideline，Claude 会有更清晰的目标，从而提高输出的质量。
 
 ## 编写 Guideline
 
-![img](./03c-specific.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623571%2F05_-_003_-_Being_Specific_05.1748623571451.png)
+![img](./03c-specific.assets/2.png)
 
 Guideline 大体可分为两类，专业的 AI 应用中它们常常被一起使用。这种组合既让你在结果上保持一致性，也让你确信 Claude 在得出结论时已经考虑了所有重要因素。
 
