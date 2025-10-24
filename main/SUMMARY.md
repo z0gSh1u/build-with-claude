@@ -27,7 +27,7 @@
 - [运行评测](02-prompt-evaluation/02d-run-eval.md)
 - [基于模型的打分](02-prompt-evaluation/02e-model-based.md)
 - [基于代码的打分](02-prompt-evaluation/02f-code-based.md)
-- [练习](02-prompt-evaluation/02g-exercise.md)
+- [提示词评估练习](02-prompt-evaluation/02g-exercise.md)
 - [小测验](02-prompt-evaluation/02h-quiz.md)
 
 # 提示词工程
@@ -37,7 +37,7 @@
 - [具体并准确](03-prompt-engineering/03c-specific.md)
 - [使用 XML 标签](03-prompt-engineering/03d-xml-tag.md)
 - [提供示例](03-prompt-engineering/03e-few-shot-example.md)
-- [练习](03-prompt-engineering/03f-exercise.md)
+- [提示词工程练习](03-prompt-engineering/03f-exercise.md)
 - [小测验](03-prompt-engineering/03g-quiz.md)
 
 # 工具使用（Tool Use）
