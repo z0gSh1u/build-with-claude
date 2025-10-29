@@ -48,14 +48,15 @@
 - [工具 Schema](04-tool-use/04d-schema.md)
 - [处理消息块](04-tool-use/04e-message-block.md)
 - [发送工具调用结果](04-tool-use/04f-tool-result.md)
-- [带工具的多轮对话](04-tool-use/04g-multi-turn-with-tool.md)
+- [多轮工具调用](04-tool-use/04g-multi-turn-with-tool.md)
 - [实现带工具的多轮对话](04-tool-use/04h-implement-multi-turn.md)
-- [批量工具](04-tool-use/04i-batch-tool.md)
-- [用于结构化数据的工具](04-tool-use/04j-tool-for-structured-data.md)
-- [细粒度的工具调用](04-tool-use/04k-fine-grained-tool-call.md)
-- [文本编辑工具](04-tool-use/04l-text-edit.md)
-- [网络搜索工具](04-tool-use/04m-web-search.md)
-- [小测验](04-tool-use/04n-quiz.md)
+- [使用多个工具](04-tool-use/04i-multi-tools.md)
+- [批量工具](04-tool-use/04j-batch-tool.md)
+- [用于结构化数据的工具](04-tool-use/04k-tool-for-structured-data.md)
+- [细粒度的工具调用](04-tool-use/04l-fine-grained-tool-call.md)
+- [文本编辑工具](04-tool-use/04m-text-edit.md)
+- [网络搜索工具](04-tool-use/04n-web-search.md)
+- [小测验](04-tool-use/04o-quiz.md)
 
 # 检索增强生成（RAG）
 
