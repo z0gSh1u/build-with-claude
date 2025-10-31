@@ -51,36 +51,30 @@ def chunk_by_section(document_text):
 
 ## 基于句子的分块
 
-一个实用的折中方法是按句子进行分块。您使用正则表达式将文本分割成单个句子，然后将它们分组成带可选重叠的分块：
+一个实用的折中方法是按句子进行分块。例如使用正则表达式将文本分割成单个句子，然后将它们分组成带重叠的块：
 
 ```python
 def chunk_by_sentence(text, max_sentences_per_chunk=5, overlap_sentences=1):
-    sentences = re.split(r"(?<=[.!?])\s+", text)
-    
+    sentences = re.split(r"(?<=[.!?])\s+", text) # 句子
     chunks = []
     start_idx = 0
-    
     while start_idx < len(sentences):
         end_idx = min(start_idx + max_sentences_per_chunk, len(sentences))
-        current_chunk = sentences[start_idx:end_idx]
+        current_chunk = sentences[start_idx:end_idx] # 分块
         chunks.append(" ".join(current_chunk))
-        
-        start_idx += max_sentences_per_chunk - overlap_sentences
-        
+        start_idx += max_sentences_per_chunk - overlap_sentences # 带重叠
         if start_idx < 0:
             start_idx = 0
-    
+
     return chunks
 ```
 
 ## 选择策略
 
-你的选择完全取决于你的使用场景和文档保证：
+具体选用哪种分块策略取决于你的使用场景和文档特征：
 
-- 基于结构的：当你控制文档格式时（如内部公司报告）效果最佳
-- 基于句子的：大多数文本文档的不错折中方案
-- 基于大小的：最可靠的备用方案，适用于任何内容类型，包括代码
+- 基于结构的分块：当文档格式可控时（如公司内部的报告）
+- 基于句子的分块：对大多数文档都不错的折中方案
+- 基于大小的分块：最可靠的备用方案，适用于包括代码在内的任何类型内容
 
-基于大小的分块（带重叠）通常是生产环境中的首选方案，因为它简单、可靠，并且适用于任何文档类型。虽然它可能无法提供完美结果，但它能持续生成合理的分块，而不会破坏你的处理流程。
-
-记住：没有单一的“最佳”文本分割策略。正确的方法取决于你的具体文档、使用场景，以及你愿意在实现复杂性和分割质量之间做出的权衡。
+需要明确的是，没有不变的最佳分块策略，而是需要根据文档特性和使用场景，在实现复杂性和分割质量之间做出权衡。
