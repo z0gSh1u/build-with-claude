@@ -51,7 +51,7 @@
 - [多轮工具调用](04-tool-use/04g-multi-turn-with-tool.md)
 - [实现带工具的多轮对话](04-tool-use/04h-implement-multi-turn.md)
 - [使用多个工具](04-tool-use/04i-multi-tools.md)
-- [批量工具](04-tool-use/04j-batch-tool.md)
+- [批处理工具](04-tool-use/04j-batch-tool.md)
 - [用于结构化数据的工具](04-tool-use/04k-tool-for-structured-data.md)
 - [细粒度的工具调用](04-tool-use/04l-fine-grained-tool-call.md)
 - [文本编辑工具](04-tool-use/04m-text-edit.md)
