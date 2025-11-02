@@ -40,7 +40,7 @@ add_user_message(messages, [
 
 在需要 Claude 针对图片得出结果时，提示词技巧很重要，简单的提示词往往效果不佳。例如：
 
-![img](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542457%2F08_-_002_-_Image_Support_04.1748542456885.jpg)
+![img](06b-image.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542457%2F08_-_002_-_Image_Support_04.1748542456885-1762052743754-1.jpg)
 
 只是询问“这张图片里有多少个弹珠？”很可能得到错误的计数。而通过：
 
