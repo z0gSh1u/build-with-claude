@@ -17,7 +17,7 @@ Tool Use 使 Claude 从一个静态知识库转变为一个可以处理实时数
 
 ## Tool Use 的原理
 
-![img](./04a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623643%2F06_-_001_-_Introducing_Tool_Use_07.1748623643055.png)
+![img](./04a-introduce.assets/1.png)
 
 Tool Use 遵循你的应用与 Claude 之间特定的来回模式，完整流程如下：
 
@@ -28,12 +28,9 @@ Tool Use 遵循你的应用与 Claude 之间特定的来回模式，完整流程
 
 以下是一个“天气问题”的例子：
 
-![img](./04a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623644%2F06_-_001_-_Introducing_Tool_Use_14.1748623643863.png)
+![img](./04a-introduce.assets/2.png)
 
 - 当用户询问当前天气时，你在提示词中包含如何获取天气数据的说明
 - Claude 识别出需求，并请求特定位置的天气数据
 - 你的服务器调用天气 API 获取实时情况，并将数据发送回 Claude
 - Claude 将最新的天气数据与用户的问题结合，提供准确且实时性好的回复
-
-
-

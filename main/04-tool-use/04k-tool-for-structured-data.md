@@ -13,7 +13,7 @@
 - 从 Tool Use 块中提取结构化数据
 - 至此已经拥有数据，无需再提供后续的 Tool Result 块
 
-![img](./04k-tool-for-structured-data.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623754%2F06_-_011_-_Tools_for_Structured_Data_03.1748623754770.png)
+![img](./04k-tool-for-structured-data.assets/1.png)
 
 例如上面的例子，如果想要从一份报表中提取财务余额和关键见解，Schema 中可以将它们定义为整数和字符串数组。
 
@@ -40,7 +40,7 @@ article_summary_schema = {
         "type": "object",
         "properties": { # 这里描述了你期望的数据结构
             "title": {"type": "string"},
-            "author": {"type": "string"}, 
+            "author": {"type": "string"},
             "key_insights": {
                 "type": "array",
                 "items": {"type": "string"}
@@ -64,5 +64,3 @@ structured_data = response.content[0].input
 - 当需要保证可靠性，且有能力处理额外的复杂性时，选择基于工具的方法
 
 这两种技术都很有价值，具体取决于你的特定使用场景和需求。
-
-

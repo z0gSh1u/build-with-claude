@@ -6,7 +6,7 @@
 
 假设用户问“今天起的第 103 天是哪一天？”，Claude 需要先调用 `get_current_datetime`，再基于调用结果再调用 `add_duration_to_datetime`。而“决定调用后者”这一决策及工具输入依赖前者的输出，因此无法放在具有两个工具调用块的一条助手消息中，而需要两条助手消息，就形成了多轮对话模式。
 
-![img](./04g-multi-turn-with-tool.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623703%2F06_-_007_-_Multi-Turn_Conversations_with_Tools_03.1748623703654.png)
+![img](./04g-multi-turn-with-tool.assets/1.png)
 
 更具体地，流程如下：
 
@@ -31,7 +31,7 @@ def run_conversation(messages):
             break
         tool_result_blocks = run_tools(response)
         add_user_message(tool_result_blocks)
-        
+
     return messages
 ```
 
@@ -43,6 +43,3 @@ def run_conversation(messages):
 - `text_from_message` 函数用于从复杂消息中提取可读文本
 
 随后，我们就可以实现自动处理多个工具调用的对话循环，让 Claude 可以根据需要使用尽可能多的工具来回答用户的问题。
-
-
-

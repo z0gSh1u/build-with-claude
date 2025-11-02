@@ -1,33 +1,15 @@
 # 09h - 小测验
 
-Question 1: Correct answer
-问题 1：正确答案
-
-You're building an agent with tools. Which approach will give Claude the most flexibility to handle unexpected requests?
 你正在构建一个带有工具的智能体。哪种方法将给 Claude 提供最大的灵活性来处理意外请求？
-
- Give Claude only one powerful tool
 只给 Claude 提供一个强大的工具
-
- Provide very specific tools like "write_python_function" and "debug_code"
 提供非常具体的工具，如“write_python_function”和“debug_code”
-
- **Provide abstract tools like "read_file", "write_file", and "run_command"
 提供抽象的、原子化的工具，如“read_file”、“write_file”和“run_command”**
-
- Provide tools that only work for planned scenarios
 提供仅适用于计划场景的工具
-
-Question 2: Correct answer
-问题 2：正确答案
-
-You want Claude to write a report, then check if it's good enough, and improve it if needed. What pattern are you using?
 您想让 Claude 写一份报告，然后检查它是否足够好，如果需要的话进行改进。您使用的是什么模式？
 
- Chaining workflow 工作流链式
+工作流链式
 
- **Evaluator-Optimizer pattern
-评估-优化模式**
+ **评估-优化模式**
 
  Parallelization workflow
 并行化工作流

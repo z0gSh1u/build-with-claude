@@ -27,7 +27,6 @@
 
 我们将逐一实现这些工具，最终 Claude 将能够结合这些工具来处理自然语言请求。
 
-![img](./04b-overview.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623640%2F06_-_003_-_Tool_Functions_00.1748623639986.png)
+![img](./04b-overview.assets/1.png)
 
 Tool Use 表明了一个与 AI 合作的关键原则：当模型存在局限性时，通过工具来扩展其能力，而不是试图用提示词绕过这些局限性。
-

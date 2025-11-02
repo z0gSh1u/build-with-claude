@@ -19,13 +19,13 @@ result = get_current_datetime(**response.content[1].input) # input 是函数调�
 - content：工具的输出，序列化为字符串
 - is_error：当发生错误时为 True
 
-![img](./04f-tool-result.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623701%2F06_-_006_-_Sending_Tool_Results_05.1748623701131.png)
+![img](./04f-tool-result.assets/1.png)
 
 ## 多工具调用
 
 有些时候，Claude 可能在一条助手消息中同时请求多次工具调用，即有多个 Tool Use 块。相应地，开发者需要返回多个 Tool Result 块，之间的对应关系则由 ID 确定。
 
-![img](./04f-tool-result.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623702%2F06_-_006_-_Sending_Tool_Results_07.1748623702036.png)
+![img](./04f-tool-result.assets/2.png)
 
 ## 构造后续请求
 
@@ -47,5 +47,4 @@ messages.append({
 
 另外，在发送后续请求时，即使你不再需要 Claude 再进行某些工具调用，也需要将历史中存在的工具的 Schema 放在 `tools` 参数中，Claude 才能理解对话历史中存在的工具是什么。
 
-![img](./04f-tool-result.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623704%2F06_-_006_-_Sending_Tool_Results_04.1748623704156.png)
-
+![img](./04f-tool-result.assets/3.png)

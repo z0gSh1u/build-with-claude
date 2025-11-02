@@ -8,7 +8,7 @@
 
 批处理工具接受一系列调用其他工具的请求。Claude 不再直接调用多个工具，而是调用一次批处理工具，并提供参数来描述它实际想要调用的工具。
 
-![img](./04j-batch-tool.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623767%2F06_-_010_-_The_Batch_Tool_05.1748623766803.png)
+![img](./04j-batch-tool.assets/1.png)
 
 批处理工具接收一个调用列表，其中每个调用包含：
 
@@ -67,6 +67,3 @@ def run_tool(tool_name, tool_input):
 ```
 
 批处理工具为 Claude 提供了并行工具执行的更高层次抽象。这种做法看起来可能有些多余，但它常常是有效的，能够鼓励 Claude 将工具调用聚合在一起，减少 API Round Trip 次数以提高整体效率。
-
-
-

@@ -4,7 +4,7 @@
 
 ## 编写 JSON Schema
 
-![img](./04d-schema.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623701%2F06_-_004_-_Tool_Schemas_02.1748623700746.png)
+![img](./04d-schema.assets/1.png)
 
 JSON Schema 是一种广泛使用的数据验证规范，一条完整的 Schema 包含三个主要部分：
 
@@ -59,4 +59,3 @@ get_current_datetime_schema = {
 ```
 
 还可以使用 `anthropic.types.ToolParam` 包裹 JSON Schema，能帮助更好地进行类型检查，使代码更健壮。
-

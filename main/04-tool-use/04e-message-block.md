@@ -21,7 +21,7 @@ response = client.messages.create(...,
 
 当 Claude 决定使用工具时，会返回包含多块的消息，例如文本块 + 工具使用块：
 
-![img](./04e-message-block.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748623695%2F06_-_005_-_Handling_Message_Blocks_07.1748623695372.png)
+![img](./04e-message-block.assets/1.png)
 
 文本块包含人类可读文本，解释 Claude 正在做什么；工具使用块包含调用哪个工具以及使用什么参数的代码化的说明。更具体地，工具使用块的结构含：
 
@@ -39,17 +39,13 @@ Tool Use 遵循如下流程，每一步都需要仔细处理消息结构：
 - 提取工具使用信息并执行实际功能：即 Claude 只会给出调用工具的必要信息（或者说“请求调用”），而“调用”操作本身需要开发者自己处理
 - 将工具调用结果连同对话历史一起发送回 Claude：当在往对话历史中添加包含工具调用的助手消息时，需要附加完整的文本块和工具使用块，才能正确保持上下文
 
-    ```python
-    messages.append({
-        "role": "assistant",
-        "content": response.content # 需要是完整的 content，不能丢弃任何 Block
-    })
-    ```
+  ```python
+  messages.append({
+      "role": "assistant",
+      "content": response.content # 需要是完整的 content，不能丢弃任何 Block
+  })
+  ```
+
 - 从 Claude 接收最终响应
 
 本节的代码在 [04e.ipynb](./04e.ipynb)，我们更新了其中的 `add_user_message` 和 `add_assistant_message`，来正确处理多块消息。
-
-
-
-
-
