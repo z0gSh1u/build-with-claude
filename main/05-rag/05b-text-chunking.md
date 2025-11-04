@@ -2,7 +2,7 @@
 
 文本分块是构建 RAG 系统最关键的步骤之一。不当的分块策略可能导致无关的上下文被加入到提示词中，导致 Claude 给出错误的答案。
 
-![img](./05b-text-chunking.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542230%2F07_-_002_-_Text_Chunking_Strategies_05.1748542229862.jpg)
+![img](./05b-text-chunking.assets/1.jpg)
 
 ## 基于大小的分块
 
@@ -12,7 +12,7 @@
 - Chunk 失去了周围文本的重要上下文
 - 章节标题可能与内容分离
 
-![img](./05b-text-chunking.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542230%2F07_-_002_-_Text_Chunking_Strategies_06.1748542230454-1761094894070-5.jpg)
+![img](./05b-text-chunking.assets/2.jpg)
 
 为了解决这些问题，常用的方法是在 Chunk 之间添加重叠，每个块都包含一些相邻块中的字符，以提供更好的上下文并确保单词和句子完整。
 
@@ -32,7 +32,7 @@ def chunk_by_char(text, chunk_size=150, chunk_overlap=20):
 
 基于结构的分块根据文档的自然结构，如标题、段落来划分文本。当文档具备像 Markdown 这样良好的格式时，这种方法效果很好。
 
-![img](./05b-text-chunking.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542232%2F07_-_002_-_Text_Chunking_Strategies_09.1748542232356.jpg)
+![img](./05b-text-chunking.assets/3.jpg)
 
 ```python
 def chunk_by_section(document_text):

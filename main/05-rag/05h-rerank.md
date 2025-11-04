@@ -8,7 +8,7 @@
 
 重新排序在概念上很简单。在运行你的向量索引和 BM25 索引并将结果合并后，你添加了一个额外的步骤：一个使用 Claude 智能重新排序你搜索结果的重新排序器。
 
-![img](05h-rerank.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542387%2F07_-_008_-_Reranking_Results_05.1748542387152.jpg)
+![img](05h-rerank.assets/1.jpg)
 
 这个过程是这样的：
 
@@ -60,7 +60,7 @@ Claude 然后可以返回一个简单的列表，如 `["1p5g", "51n3", "ab83"]` 
 
 重排序函数在初始混合搜索完成后由您的检索器自动调用。这是基本结构：
 
-```python
+````python
 def reranker_fn(docs, query_text, k):
     # Format documents with IDs
     joined_docs = "\n".join([
@@ -72,27 +72,27 @@ def reranker_fn(docs, query_text, k):
         """
         for doc in docs
     ])
-    
+
     # Create prompt and get Claude's response
     prompt = f"""..."""
     messages = []
     add_user_message(messages, prompt)
     add_assistant_message(messages, """```json""")
-    
+
     result = chat(messages, stop_sequences=["""```"""])
-    
+
     return json.loads(result["text"])["document_ids"]
-```
+````
 
 ## 结果
 
-在用“what did the eng team do with INC-2023-Q4-011?”测试重新排序方法时，软件工程部分现在出现在结果的第一位。Claude成功识别出用户的查询特别关注工程团队及其与事件的关系。
+在用“what did the eng team do with INC-2023-Q4-011?”测试重新排序方法时，软件工程部分现在出现在结果的第一位。Claude 成功识别出用户的查询特别关注工程团队及其与事件的关系。
 
 ## 权衡
 
 重新排序伴随着明显的权衡：
 
-- 延迟增加：现在您必须等待额外的API调用以获取Claude的响应
-- 准确度提高：Claude能够以纯向量相似性无法做到的方式理解上下文和相关性
+- 延迟增加：现在您必须等待额外的 API 调用以获取 Claude 的响应
+- 准确度提高：Claude 能够以纯向量相似性无法做到的方式理解上下文和相关性
 
 对于大多数应用来说，准确度的提升值得延迟的成本，尤其是在处理复杂查询时，语义理解比纯关键词匹配更重要。

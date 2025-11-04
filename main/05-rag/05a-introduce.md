@@ -6,7 +6,7 @@
 
 提示词中可以包含的文本量是有限的。例如，有一份 800 页的财务文档，并想就特定问题“这家公司有哪些风险因素？”提问的情况。
 
-### 方法1：在提示词中包含所有内容
+### 方法 1：在提示词中包含所有内容
 
 从文档中提取所有文本，并于用户问题一起放到提示词中，例如：
 
@@ -22,7 +22,7 @@ Answer the user's question about the financial document.
 </financial_document>
 ```
 
-![img](./05a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542175%2F07_-_001_-_Introducing_Retrieval_Augmented_Generation_05.1748542174970.jpg)
+![img](./05a-introduce.assets/1.jpg)
 
 该方法存在严重的局限性：
 
@@ -31,13 +31,13 @@ Answer the user's question about the financial document.
 - 更长的提示词会带来更高 Token 消耗，增加处理成本
 - 更长的提示词需要更多时间来响应
 
-### 方法2：将文档拆分为块
+### 方法 2：将文档拆分为块
 
 RAG 采用更聪明的方法。首先在预处理时将文档拆分成小块，然后当用户提问时找到与问题最相关的块，并仅将这些块包含在提示词中。
 
 例如，如果有人问“这家公司面临哪些风险？”，RAG 会在文本片段中找到“风险因素”部分，并在提示词中只包含这个相关的片段。
 
-![img](./05a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542175%2F07_-_001_-_Introducing_Retrieval_Augmented_Generation_09.1748542175794.jpg)
+![img](./05a-introduce.assets/2.jpg)
 
 ## RAG 的优势和挑战
 
@@ -56,4 +56,3 @@ RAG 采用更聪明的方法。首先在预处理时将文档拆分成小块，�
 - 有很多种文本分块的方法需要权衡选用，例如将文档分成等大小的部分，或者根据文档结构（如标题和章节）来分段
 
 RAG 涉及许多技术决策，比简单地将所有内容包含在提示词中需要更多的工作量。在处理非常大的文档、多个文档，或者需要优化成本和性能时，它尤其有价值。但记得评估你的收益是否超过了 RAG 的复杂性。
-

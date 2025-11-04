@@ -6,7 +6,7 @@ Anthropic API 提供了两个强大且协同工作的功能：Files API 和 Code
 
 Files API 提供了一种处理文件上传的替代方式。您不必直接在消息中将图像或 PDF 编码为 base64 数据，而是可以提前上传文件并在之后引用它们。
 
-![img](./06h-code-exec-and-files-api.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542606%2F08_-_008_-_Code_Execution_and_the_Files_API_02.1748542606050.jpg)
+![img](./06h-code-exec-and-files-api.assets/1.jpg)
 
 - 将你的文件（图像、PDF、文本等）通过单独的 API 调用上传到 Claude
 - 接收一个包含唯一文件 ID 的文件元数据对象
@@ -18,7 +18,7 @@ Files API 提供了一种处理文件上传的替代方式。您不必直接在�
 
 代码执行是一个基于服务器的工具，它不需要你提供实现。你只需在请求中包含一个预定义的工具模式，Claude 就可以选择性地在一个隔离的 Docker 容器中执行 Python 代码。
 
-![img](./06h-code-exec-and-files-api.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542607%2F08_-_008_-_Code_Execution_and_the_Files_API_04.1748542607054.jpg)
+![img](./06h-code-exec-and-files-api.assets/2.jpg)
 
 - 在隔离的 Docker 容器中运行
 
@@ -71,7 +71,7 @@ chat(
 - 服务器工具使用块 - Claude 决定实际运行的代码
 - 代码执行工具结果块 - 运行代码的输出
 
-![img](./06h-code-exec-and-files-api.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542608%2F08_-_008_-_Code_Execution_and_the_Files_API_13.1748542608585.jpg)
+![img](./06h-code-exec-and-files-api.assets/3.jpg)
 
 Claude 可能会在单个响应中多次执行代码，迭代地构建其分析。每次执行周期都包括代码及其结果。
 

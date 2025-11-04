@@ -8,7 +8,7 @@
 
 当启用扩展思考时，Claude 的响应会变为包含两个部分的结构化数据，你将同时获得推理过程和最终答案。
 
-![img](./06a-extended-thinking.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542429%2F08_-_001_-_Extended_Thinking_04.1748542429342.jpg)
+![img](./06a-extended-thinking.assets/1.jpg)
 
 扩展思考的主要优势包括：
 
@@ -28,7 +28,7 @@
 
 首先，我们了解一下扩展思考的响应结构：
 
-- 扩展思考的响应 Block 的 `type` 值为 `"thinking"` 
+- 扩展思考的响应 Block 的 `type` 值为 `"thinking"`
 - 该 Block 携带一个签名 `signature` 来防止开发者篡改 Claude 的推理过程
 - 有时你收到的 Thinking Block 是被删节的，而不是可读文本，这是因为 Claude 的思维过程被内部安全系统标记加密；你仍然可以照常使用，不会失去上下文
 
@@ -53,8 +53,3 @@ def chat(
 ```
 
 当需要 Claude 处理复杂的推理任务时，扩展思考是一个强大的功能，但鉴于成本和延迟的影响，通常应谨慎使用。关键是确保你从 Baseline 提示词开始迭代，并彻底地优化，然后仅在确实需要额外推理能力时添加思考。
-
-
-
-
-

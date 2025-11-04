@@ -2,7 +2,7 @@
 
 在构建 RAG 管道时，你会很快发现仅靠语义搜索并不总是能获得最佳结果。有时你需要精确的术语匹配，而语义搜索可能会遗漏这些匹配。解决方法是使用一种称为 BM25 的技术，将语义搜索与词法搜索结合起来。
 
-![img](./05f-bm25-lexical-search.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542341%2F07_-_006_-_BM25_Lexical_Search_05.1748542341261.jpg)
+![img](./05f-bm25-lexical-search.assets/1.jpg)
 
 ## 仅使用语义搜索的问题
 
@@ -20,7 +20,7 @@
 
 ## BM25 搜索
 
-![img](./05f-bm25-lexical-search.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542342%2F07_-_006_-_BM25_Lexical_Search_07.1748542342052.jpg)
+![img](./05f-bm25-lexical-search.assets/2.jpg)
 
 BM25（最佳匹配 25）是一种在 RAG 系统中常用的词法搜索算法。以下是它处理搜索查询的方式：
 
@@ -61,7 +61,7 @@ for doc, distance in results:
 
 当你运行这个搜索时，你会比单独使用语义搜索得到更好的结果。BM25 算法优先考虑实际包含你特定搜索词的段落，尤其是像事件 ID 这样的罕见词。
 
-![img](./05f-bm25-lexical-search.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542342%2F07_-_006_-_BM25_Lexical_Search_16.1748542342415.jpg)
+![img](./05f-bm25-lexical-search.assets/3.jpg)
 
 注意现在结果如何正确地优先考虑软件工程部分和网络安全部分——这两个部分实际上都包含你正在搜索的事件 ID。
 

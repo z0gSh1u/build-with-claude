@@ -17,7 +17,7 @@
 
 当启用引用时，Claude 响应的结构会变得复杂。你得到的将不再是简单的文本，而是包含引用信息的结构化数据：
 
-![img](./06d-citation.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542500%2F08_-_004_-_Citations_08.1748542500257.jpg)
+![img](./06d-citation.assets/1.jpg)
 
 具体来说，每个引用包含如下关键信息：
 
@@ -31,7 +31,7 @@
 
 ```python
 {
-    "type": "document", 
+    "type": "document",
     "source": {
         "type": "text",
         "media_type": "text/plain",
@@ -62,4 +62,3 @@
 - 用户想要探索某事实的更广泛背景知识
 
 通过引用，Claude 从一个只提供答案的“黑箱”转变为一个透明的助手，从而建立用户信任，并让用户在需要时能深入资料来源。
-

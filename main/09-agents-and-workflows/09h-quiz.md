@@ -1,108 +1,50 @@
 # 09h - 小测验
 
-你正在构建一个带有工具的智能体。哪种方法将给 Claude 提供最大的灵活性来处理意外请求？
-只给 Claude 提供一个强大的工具
-提供非常具体的工具，如“write_python_function”和“debug_code”
-提供抽象的、原子化的工具，如“read_file”、“write_file”和“run_command”**
-提供仅适用于计划场景的工具
-您想让 Claude 写一份报告，然后检查它是否足够好，如果需要的话进行改进。您使用的是什么模式？
+> 你正在构建一个带有工具的 Agent。哪种方法可以给 Claude 最大的灵活性，来处理未见过的请求？
 
-工作流链式
+- 只给 Claude 提供一个强大的工具
+- 提供非常具体的工具，如“write_python_function”和“debug_code”
+- **提供抽象的、原子化的工具，如“read_file”、“write_file”和“run_command”**
+- 提供仅适用于计划中的场景的工具
 
- **评估-优化模式**
+> 你想让 Claude 写一份报告，然后检查它是否足够好，如果有需要则进行改进。这使用的是什么模式？
 
- Parallelization workflow
-并行化工作流
+- 链式工作流
+- **评估-优化模式**
+- 并行化工作流
+- 路由式工作流
 
- Routing workflow 路由工作流
+> 你的应用要生成不同类型的社会媒体内容：编程主题的需要教育性，而体育主题的则需要以娱乐为重点。应该使用什么模式？
 
-Question 3: Correct answer
-问题 3：正确答案
+- **将请求路由到专门的 Pipeline**
+- 对所有内容使用相同的提示词
+- 让用户自己编写提示词
+- 始终采用娱乐性的提示词
 
-Your app generates different types of social media content. Programming topics need educational scripts, while sports topics need entertainment-focused content. What pattern should you use?
-您的应用生成不同类型的社会媒体内容。编程主题需要教育性脚本，而体育主题需要以娱乐为重点的内容。您应该使用什么模式？
+> Claude 接收到一个包含许多要求的长提示词时，会忽略其中的一些规则。有什么方法能有所帮助？
 
- **Route requests to specialized processing pipelines
-将请求路由到专门的加工管道**
+- 将提示词变得更长，加入更多规则
+- 并行运行所有任务
+- 使用路由式工作流先进行分类
+- **将任务链式组成顺序步骤，每个步骤都相对聚焦**
 
- Use the same prompt for everything
-对所有内容使用相同的提示
+> 你需要 Claude 根据金属、塑料、陶瓷和木材选项推荐最适合某个部件的材料。每种材料都有不同的标准。最佳的方法是什么？
 
- Ask users to write their own content
-让用户自己编写内容
+- 依次连锁评估
+- 让 Claude 随机选择
+- **并行发送针对每种材料类型的单独请求**
+- 将所有标准放入一个大的提示中
 
- Always use the entertainment approach
-始终采用娱乐方法
+> 您需要为您的应用选择工作流或代理。可靠性和可预测的结果对您来说最为重要。您应该选择哪一个？
 
-Question 4: Correct answer
-问题 4：正确答案
+- 始终使用代理以获得最大灵活性
+- **使用工作流，因为它更可靠且可测试**
+- 两种方法同等结合
+- 使用编写起来更简单的那个
 
-Claude keeps ignoring some of your rules when you give it a long prompt with many requirements. What workflow approach would help?
-Claude 在接收到一个包含许多要求的长时间提示时，会忽略一些你的规则。有什么工作流方法能有所帮助？
+> 您正在开发一个应用程序，用户上传损坏的汽车部件照片，并始终获得维修成本估算。您知道每次都需要哪些步骤。您应该使用什么？
 
- Make the prompt even longer with more rules
-将提示变得更长，加入更多规则
-
- Run everything in parallel
-并行运行所有任务
-
- Use a routing workflow to categorize first
-使用路由工作流先进行分类
-
- **Chain the task into focused sequential steps
-将任务链成专注的顺序步骤**
-
-Question 5: Correct answer
-问题 5：正确答案
-
-You need Claude to recommend the best material for a part by considering metal, plastic, ceramic, and wood options. Each material has different criteria. What's the best approach?
-您需要 Claude 根据金属、塑料、陶瓷和木材选项推荐最适合某个部件的材料。每种材料都有不同的标准。最佳的方法是什么？
-
- Chain the evaluations one after another
-依次连锁评估
-
- Ask Claude to pick randomly
-让 Claude 随机选择
-
- **Send separate requests for each material type in parallel
-并行发送针对每种材料类型的单独请求**
-
- Put all criteria in one big prompt
-将所有标准放入一个大的提示中
-
-Question 6: Correct answer
-问题 6：正确答案
-
-You need to choose between a workflow and an agent for your app. Reliability and predictable results are most important to you. Which should you pick?
-您需要为您的应用选择工作流或代理。可靠性和可预测的结果对您来说最为重要。您应该选择哪一个？
-
- Always use an agent for maximum flexibility
-始终使用代理以获得最大灵活性
-
- **Use a workflow since it's more reliable and testable
-使用工作流，因为它更可靠且可测试**
-
- Combine both approaches equally
-两种方法同等结合
-
- Use whichever is easier to code
-使用编写起来更简单的那个
-
-Question 7: Correct answer
-问题 7：正确答案
-
-You're building an app where users upload photos of damaged car parts and always get repair cost estimates. You know exactly what steps are needed each time. What should you use?
-您正在开发一个应用程序，用户上传损坏的汽车部件照片，并始终获得维修成本估算。您知道每次都需要哪些步骤。您应该使用什么？
-
- Multiple agents working together
-多个协同工作的智能体
-
- A single complex prompt
-一个单一的复杂提示
-
- An agent with many specialized tools
-一个拥有许多专业工具的智能体
-
- **A workflow with predetermined steps
-一个具有预定步骤的工作流程**
-
+- 多个协同工作的智能体
+- 一个单一的复杂提示
+- 一个拥有许多专业工具的智能体
+- **一个具有预定步骤的工作流程**

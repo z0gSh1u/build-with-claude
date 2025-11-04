@@ -36,5 +36,4 @@ add_user_message(
 
 本节的代码在 [06c.ipynb](./06c.ipynb)，使用 Claude 处理了一个保存自维基百科的 PDF，用一句话总结了复杂的文档内容。
 
-![img](./06c-pdf.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542484%2F08_-_003_-_PDF_Support_02.1748542484779.jpg)
-
+![img](./06c-pdf.assets/1.jpg)

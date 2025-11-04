@@ -40,7 +40,7 @@ add_user_message(messages, [
 
 在需要 Claude 针对图片得出结果时，提示词技巧很重要，简单的提示词往往效果不佳。例如：
 
-![img](06b-image.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542457%2F08_-_002_-_Image_Support_04.1748542456885-1762052743754-1.jpg)
+![img](06b-image.assets/1.jpg)
 
 只是询问“这张图片里有多少个弹珠？”很可能得到错误的计数。而通过：
 
@@ -58,11 +58,11 @@ add_user_message(messages, [
 这张图片中弹珠的确切的、已核实的数量是多少？
 ```
 
-![img](./06b-image.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542457%2F08_-_002_-_Image_Support_05.1748542457338.jpg)
+![img](./06b-image.assets/2.jpg)
 
 以下则是提供 Few-Shot 示例的做法，即携带一张已知数量的图片并说明正确答案，然后再询问目标图片；这为 Claude 提供了一个参考，有助于它了解你想要进行的具体图像分析任务：
 
-![img](./06b-image.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542458%2F08_-_002_-_Image_Support_07.1748542457815.jpg)
+![img](./06b-image.assets/3.jpg)
 
 本节的代码在 [06b.ipynb](./06b.ipynb)。
 
@@ -70,7 +70,7 @@ add_user_message(messages, [
 
 考虑为保险公司实现自动化的火灾风险评估。他们不必派检查员到每一处房产，而是可以使用卫星图像和 Claude 的分析。
 
-![img](./06b-image.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542458%2F08_-_002_-_Image_Support_08.1748542458276.jpg)
+![img](./06b-image.assets/4.jpg)
 
 正如上一个例子，我们可以用详细的提示词引导 Claude 一步步进行系统分析：
 

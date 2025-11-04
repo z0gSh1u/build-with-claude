@@ -13,19 +13,19 @@
 
 接下来，我们使用嵌入模型将每个文本块转换为数值嵌入。为了更容易理解，让我们想象我们有一个完美的嵌入模型，它总是返回正好两个数字，并且我们知道每个数字代表什么。
 
-![img](./05d-rag-flow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542285%2F07_-_004_-_The_Full_RAG_Flow_02.1748542285571.jpg)
+![img](./05d-rag-flow.assets/1.jpg)
 
 在我们的想象模型中：第一个数字代表文本谈论医学领域的程度，第二个数字代表文本谈论软件工程的程度。对于医学研究部分，我们可能会得到 `[0.97, 0.34]` - 非常专注于医学，但由于"bug"这个词，包含一些软件元素。对于软件工程部分，我们得到 `[0.30, 0.97]` - 非常专注于软件，但"感染媒介"一词带来医学暗示。
 
 嵌入 API 通常会执行一个归一化步骤，将每个向量缩放到具有 1.0 的模量。你不需要担心这里的数学问题——这是自动处理的。这给我们提供了像 `[0.944, 0.331]` 和 `[0.295, 0.955]` 这样的归一化向量。我们可以在单位圆上可视化这些嵌入，其中每个点代表我们文本中的一个片段。
 
-![img](./05d-rag-flow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542286%2F07_-_004_-_The_Full_RAG_Flow_07.1748542286054.jpg)
+![img](./05d-rag-flow.assets/2.jpg)
 
 ## 步骤 3：存储到向量数据库
 
 我们将这些嵌入存储在向量数据库中——这是一种专门优化的数据库，用于存储、比较和搜索像我们的嵌入这样的长数字列表。此时，我们暂停。到目前为止，所有的工作都是预先进行的预处理。现在我们等待用户提交查询。
 
-![img](./05d-rag-flow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542287%2F07_-_004_-_The_Full_RAG_Flow_08.1748542287015.jpg)
+![img](./05d-rag-flow.assets/3.jpg)
 
 ## 步骤 4：处理用户查询
 
@@ -35,7 +35,7 @@
 
 我们将用户的查询嵌入发送到我们的向量数据库，并要求它找到最相似的存储嵌入。
 
-![img](./05d-rag-flow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542288%2F07_-_004_-_The_Full_RAG_Flow_12.1748542288192.jpg)
+![img](./05d-rag-flow.assets/4.jpg)
 
 数据库返回软件工程部分，因为它与用户询问的内容最为接近。
 
@@ -63,7 +63,7 @@
 
 最后，我们将用户的问题和我们找到的最相关的文本块结合起来，形成一个提示，并将其发送给 Claude 以获取响应。
 
-![img](./05d-rag-flow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542288%2F07_-_004_-_The_Full_RAG_Flow_19.1748542288831.jpg)
+![img](./05d-rag-flow.assets/5.jpg)
 
 提示可能如下所示：
 
