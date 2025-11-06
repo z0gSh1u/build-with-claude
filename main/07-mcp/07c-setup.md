@@ -9,7 +9,7 @@
 - 一个处理用户交互的 MCP 客户端
 - 一个自定义的 MCP 服务器，用于管理文档操作
 
-![img](./07c-setup.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542682%2F09_-_003_-_Project_Setup_03.1748542682857.jpg)
+![img](./07c-setup.assets/1.jpg)
 
 该服务器将提供两个基本工具：一个用于读取文档内容，另一个用于更新它们。所有文档将存储在内存中以简化操作——无需数据库。
 

@@ -9,7 +9,7 @@ MCP 服务器中的资源允许你向客户端展示数据，类似于典型 HTT
 - 获取所有可用文档的列表（用于自动补全）
 - 获取特定文档的内容（当提及时）
 
-![img](./07g-define-resource.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542782%2F09_-_007_-_Defining_Resources_03.1748542782123.jpg)
+![img](./07g-define-resource.assets/1.jpg)
 
 当用户输入 `@` 时，你需要显示可用的文档。当他们提交带有提及的消息时，你会自动将该文档的内容注入发送给 Claude 的提示中。
 
@@ -26,7 +26,7 @@ MCP 服务器中的资源允许你向客户端展示数据，类似于典型 HTT
 
 ## 实现资源
 
-![img](./07g-define-resource.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542783%2F09_-_007_-_Defining_Resources_07.1748542783391.jpg)
+![img](./07g-define-resource.assets/2.jpg)
 
 资源使用 `@mcp.resource()` 装饰器进行定义。以下是创建两种类型的方法：
 
@@ -79,7 +79,7 @@ uv run mcp dev mcp_server.py
 
 点击任何资源进行测试，查看客户端将收到的确切响应结构。
 
-![img](./07g-define-resource.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542784%2F09_-_007_-_Defining_Resources_18.1748542784293.jpg)
+![img](./07g-define-resource.assets/3.jpg)
 
 ## 要点
 

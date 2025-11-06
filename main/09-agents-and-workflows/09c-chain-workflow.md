@@ -6,7 +6,7 @@
 
 串联式工作流将大型任务分解为小的、按顺序（相互依赖）的子任务：
 
-![img](./09c-chain-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543145%2F11_-_003_-_Chaining_Workflows_08.1748543145309.jpg)
+![img](./09c-chain-workflow.assets/1.jpg)
 
 比如这个例子：你在开发一个社交媒体营销工具，可以自动创建和发布视频。可以将工作流分解如下：
 
@@ -35,7 +35,7 @@
 
 即便明确说明这些限制条件，Claude 生成的内容仍可能不可避免地违反部分约束：
 
-![img](./09c-chain-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543146%2F11_-_003_-_Chaining_Workflows_13.1748543146542.jpg)
+![img](./09c-chain-workflow.assets/2.jpg)
 
 与其在一个庞大的提示词上不断纠结，不如采用两步链式方法：
 
@@ -49,7 +49,7 @@
 3. 定位所有尴尬、幼稚的语句，并用技术型作家会写的文字替换。
 ```
 
-![img](./09c-chain-workflow.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543148%2F11_-_003_-_Chaining_Workflows_17.1748543148012.jpg)
+![img](./09c-chain-workflow.assets/3.jpg)
 
 这种方法之所以有效，是因为 Claude 可以完全专注于修订任务，而不是试图在创作内容与遵守约束之间取得难以衡量的平衡。
 
@@ -63,4 +63,3 @@
 - 希望保持每次交互的专注和可控
 
 相比起试图将所有内容塞入单条提示词，串联式工作流通常能产生更好的结果。关键在于识别任务是否复杂到需要分解为专门的、顺序步骤。
-

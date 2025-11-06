@@ -4,7 +4,7 @@
 
 思考一下 Claude 如何与计算机使用协同工作。每当 Claude 执行诸如输入文本或点击按钮等操作时，它会立即收到一张截图来了解发生了什么。这不仅仅是一个锦上添花的特性——这是必需的。
 
-![img](09f-env-inspect.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543181%2F11_-_006_-_Environment_Inspection_00.1748543181585.jpg)
+![img](09f-env-inspect.assets/1.jpg)
 
 从克劳德的视角来看，点击一个按钮可以跳转到新页面、打开菜单或触发一系列变化。由于无法看到结果，克劳德无法理解其操作是否成功或环境的新状态是什么样的。
 
@@ -12,7 +12,7 @@
 
 此原则同样适用于文件操作。在 Claude 修改任何文件之前，它需要了解当前的内容。这看起来可能很显然，但这是构建代理时始终应遵循的模式。
 
-![img](09f-env-inspect.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543182%2F11_-_006_-_Environment_Inspection_08.1748543182126.jpg)
+![img](09f-env-inspect.assets/2.jpg)
 
 在上述示例中，当被要求向 Python 文件中添加新路由时，Claude 首先阅读现有代码以了解当前结构。只有在这种情况下，它才能安全地做出所需更改而不会破坏现有功能。
 
@@ -20,7 +20,7 @@
 
 您可以通过系统提示引导 Claude 检查其环境。对于像视频生成这样的复杂任务，这尤为重要。
 
-![img](09f-env-inspect.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543182%2F11_-_006_-_Environment_Inspection_11.1748543182591.jpg)
+![img](09f-env-inspect.assets/3.jpg)
 
 考虑一个需要以下功能的视频创作代理：
 
@@ -53,4 +53,3 @@
 - 验证生成内容是否符合要求
 
 环境检查将克劳德从盲目执行命令的执行者转变为能够真正理解和适应其工作环境的代理。
-

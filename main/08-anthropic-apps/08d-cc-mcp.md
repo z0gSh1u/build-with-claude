@@ -4,7 +4,7 @@ Claude Code 内置了 MCP 客户端，这意味着你可以连接 MCP 服务器�
 
 ## MCP 如何扩展 Claude
 
-![img](./08d-cc-mcp.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542913%2F10_-_004_-_Enhancements_with_MCP_Servers_01.1748542913123.jpg)
+![img](./08d-cc-mcp.assets/1.jpg)
 
 每个 MCP 服务器可以通过三个主要组件向 Claude 暴露不同类型的功能：工具（用于执行操作）、提示（用于模板）和资源（用于访问数据）。
 
@@ -25,7 +25,7 @@ claude mcp add documents uv run main.py
 
 当你要求 Claude 将"tests/fixtures/mcp_docs.docx"文件转换为 markdown 格式时，它会自动使用你的自定义工具来读取该文档并返回转换后的内容。
 
-![img](./08d-cc-mcp.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542914%2F10_-_004_-_Enhancements_with_MCP_Servers_13.1748542914556.jpg)
+![img](./08d-cc-mcp.assets/2.jpg)
 
 ## 流行的 MCP
 

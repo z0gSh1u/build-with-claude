@@ -16,9 +16,9 @@
 
 计算机使用遵循完全相同的模式。关键洞见是计算机使用被实现为一个工具——只是一个可以与桌面环境交互的非常特殊的工具。
 
-![img](08h-cua-how.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543026%2F10_-_008_-_How_Computer_Use_Works_08.1748543026655.jpg)
+![img](08h-cua-how.assets/1.jpg)
 
- 这里发生的事情：
+这里发生的事情：
 
 - 您包含一个提供计算机交互功能的工具模式
 - Claude 决定使用计算机工具
@@ -29,7 +29,7 @@
 
 计算机使用工具模式开始很简单，但会自动扩展成更加全面的东西：
 
-![img](08h-cua-how.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543027%2F10_-_008_-_How_Computer_Use_Works_09.1748543027109.jpg)
+![img](08h-cua-how.assets/2.jpg)
 
 您发送一个基本模式，例如：
 
@@ -59,7 +59,7 @@
 
 您无需从头开始构建计算环境。Anthropic 提供了一种参考实现，处理所有技术细节。
 
-![img](08h-cua-how.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543027%2F10_-_008_-_How_Computer_Use_Works_17.1748543027671.jpg)
+![img](08h-cua-how.assets/3.jpg)
 
 设置它很简单：
 
@@ -79,7 +79,7 @@ docker run \
   -it ghcr.io/anthropics/anthropic-quickstarts:computer-use-demo-latest
 ```
 
-![img](08h-cua-how.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543028%2F10_-_008_-_How_Computer_Use_Works_19.1748543027991.jpg)
+![img](08h-cua-how.assets/4.jpg)
 
 一旦运行，您将可以访问一个聊天界面，在那里您可以直接测试 Claude 的计算机使用能力。完整的设置指南可在 github.com/anthropics/anthropic-quickstarts 找到。
 

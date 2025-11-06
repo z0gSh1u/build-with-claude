@@ -2,7 +2,7 @@
 
 模型上下文协议（MCP）是一个通信层，它为 Claude 提供上下文和工具，而无需您编写大量繁琐的集成代码。把它想象成一种将工具定义和执行的重担从您的服务器转移到专门的 MCP 服务器的方式。
 
-![img](./07a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542645%2F09_-_001_-_Introducing_MCP_01.1748542645351.jpg)
+![img](./07a-introduce.assets/1.jpg)
 
 当您初次接触 MCP 时，您会看到展示基本架构的图表：一个 MCP 客户端（您的服务器）连接到包含工具、提示和资源的 MCP 服务器。每个 MCP 服务器都充当与某个外部服务的接口。
 
@@ -14,13 +14,13 @@
 
 GitHub 具有强大的功能——仓库、拉取请求、问题、项目等等。要构建一个完整的 GitHub 聊天机器人，你需要编写大量的工具：
 
-![img](./07a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542646%2F09_-_001_-_Introducing_MCP_05.1748542646307.jpg)
+![img](./07a-introduce.assets/2.jpg)
 
 每个工具都需要一个模式定义和一个函数实现。这代表了很多代码，作为开发者你必须编写、测试和维护这些代码。
 
 MCP 将工具定义和执行的负担从您的服务器转移到 MCP 服务器。您不再需要编写所有的 GitHub 工具，而是在专门的 MCP 服务器中进行编写和执行。MCP 服务器作为 GitHub 功能的一个封装，提供了无需自行实现的预构建工具。MCP 服务器提供对外部服务实现的数据或功能访问。它们将复杂的集成打包成可重用的组件，任何应用程序都可以连接到这些组件。
 
-![img](./07a-introduce.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542647%2F09_-_001_-_Introducing_MCP_09.1748542647009.jpg)
+![img](./07a-introduce.assets/3.jpg)
 
 ## 常见问题
 
@@ -37,4 +37,3 @@ MCP 服务器提供已为您定义的工具模式和函数。如果您直接调�
 这是一种常见的误解。MCP 服务器和工具使用是互补但不同的概念。MCP 是关于谁负责创建和维护工具的工作。使用 MCP 时，其他人已经为您编写了工具函数和模式——它们已打包在 MCP 服务器中。
 
 关键洞察在于，MCP 服务器提供了现成的工具模式和函数，无需您自己构建和维护复杂的集成。
-

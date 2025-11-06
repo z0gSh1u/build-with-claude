@@ -8,7 +8,7 @@ MCP 中的资源允许您的服务器直接在提示中展示数据，而无需�
 
 流程很简单：当用户想要引用一个文档（比如输入"@report.pdf"）时，您的应用程序使用 MCP 客户端从服务器获取该资源，并将其内容直接包含在发送给 Claude 的提示中。
 
-![img](./07h-access-resource.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542773%2F09_-_008_-_Accessing_Resources_00.1748542772895.jpg)
+![img](./07h-access-resource.assets/1.jpg)
 
 ## 实现资源读取
 
@@ -30,7 +30,7 @@ MCP 服务器的响应包含一个 `contents` 列表。通常只需要第一个�
 if isinstance(resource, types.TextResourceContents):
     if resource.mimeType == "application/json":
         return json.loads(resource.text)
-    
+
     return resource.text
 ```
 
@@ -56,7 +56,7 @@ from pydantic import AnyUrl
 - 自动获取资源内容
 - 将内容包含在提示中发送给 Claude
 
-![img](./07h-access-resource.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542774%2F09_-_008_-_Accessing_Resources_09.1748542773725.jpg)
+![img](./07h-access-resource.assets/2.jpg)
 
 主要优势在于 Claude 可以直接在提示中接收文档内容，无需调用工具来获取信息。这使得交互更加快速高效。
 

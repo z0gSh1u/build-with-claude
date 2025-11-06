@@ -6,13 +6,13 @@
 
 假设你想让 Claude 将文档格式化为 Markdown。用户可以直接输入“将 report.pdf 转换为 markdown”，这样也可以正常工作。但他们可能会通过一个经过充分测试的提示获得更好的结果，这个提示包含关于格式、结构和输出要求的特定说明。
 
-![img](./07i-define-prompt.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542823%2F09_-_009_-_Defining_Prompts_07.1748542822992.jpg)
+![img](./07i-define-prompt.assets/1.jpg)
 
 关键在于，虽然用户可以自行完成这些任务，但当使用由 MCP 服务器作者精心开发和测试的提示时，他们能够获得更一致和更高质量的结果。
 
 ## 提示词如何工作
 
-![img](./07i-define-prompt.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542823%2F09_-_009_-_Defining_Prompts_08.1748542823609.jpg)
+![img](./07i-define-prompt.assets/2.jpg)
 
 提示语定义了一组用户和助手消息，客户端可以直接使用。当客户端请求提示语时，您的服务器会返回一组可以直接发送给 Claude 的消息。基本结构如下：
 
@@ -46,7 +46,7 @@ The id of the document you need to reformat is:
 Add in headers, bullet points, tables, etc as necessary. Feel free to add in extra formatting.
 Use the 'edit_document' tool to edit the document. After the document has been reformatted...
 """
-    
+
     return [
         base.UserMessage(prompt)
     ]
@@ -56,7 +56,7 @@ Use the 'edit_document' tool to edit the document. After the document has been r
 
 您可以使用 MCP 检查器来测试提示。导航到提示部分，选择您的提示，并提供任何所需的参数。检查器将显示将发送给 Claude 生成的消息。这能让你验证你的提示正确地插入了变量，并在实际应用中使用前生成了预期的消息结构。
 
-![img](./07i-define-prompt.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542824%2F09_-_009_-_Defining_Prompts_18.1748542824116.jpg)
+![img](./07i-define-prompt.assets/3.jpg)
 
 ## 最佳实践
 

@@ -11,7 +11,7 @@ MCP 客户端由两个主要组件组成：
 - MCP 客户端 - 我们创建的自定义类，用于简化会话的使用
 - 客户端会话 - 实际连接到服务器的连接（MCP Python SDK 的一部分）
 
-![img](./07f-implement-client.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542735%2F09_-_006_-_Implementing_a_Client_02.1748542735805.jpg)
+![img](./07f-implement-client.assets/1.jpg)
 
 当我们使用完客户端会话时，需要正确清理资源。这就是为什么我们将其包装在我们的自定义 MCP 客户端类中——以自动处理所有清理工作。
 
@@ -22,7 +22,7 @@ MCP 客户端由两个主要组件组成：
 - 获取可发送给 Claude 的工具列表
 - 当 Claude 请求时执行工具
 
-![img](./07f-implement-client.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542736%2F09_-_006_-_Implementing_a_Client_06.1748542736441.jpg)
+![img](./07f-implement-client.assets/2.jpg)
 
 MCP 客户端通过简单的调用方法提供这些功能，我们的应用程序代码可以使用这些方法。
 

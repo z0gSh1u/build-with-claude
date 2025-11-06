@@ -2,7 +2,7 @@
 
 并行运行多个 Claude Code 实例是你能够获得的最大生产力提升之一。由于 Claude 非常轻量级，你可以轻松地启动多个副本，为每个副本分配不同的任务，并让它们同时工作。这实际上为你提供了一个由虚拟软件工程师组成的项目团队。
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542981%2F10_-_005_-_Parallelizing_Claude_Code_00.1748542980996.jpg)
+![img](./08e-cc-parallel.assets/1.jpg)
 
 ## 核心挑战
 
@@ -12,13 +12,13 @@
 
 ## Git Worktrees
 
-Git 工作树是这个工作流程的完美工具。*Git* 的 worktree 机制允许在同一个仓库中同时检出多个分支。每个工作树对应一个单独的分支。Separate Claude Code 实例在每个分支。当每个 Claude 实例完成工作后，你提交更改并将它们合并回你的主分支，就像任何正常的 Git 工作流程一样。
+Git 工作树是这个工作流程的完美工具。_Git_ 的 worktree 机制允许在同一个仓库中同时检出多个分支。每个工作树对应一个单独的分支。Separate Claude Code 实例在每个分支。当每个 Claude 实例完成工作后，你提交更改并将它们合并回你的主分支，就像任何正常的 Git 工作流程一样。
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542983%2F10_-_005_-_Parallelizing_Claude_Code_04.1748542982398.jpg)
+![img](./08e-cc-parallel.assets/2.jpg)
 
 与其手动创建工作树，你可以让 Claude 处理整个流程。这是一个创建工作树并设置工作区的提示：
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542983%2F10_-_005_-_Parallelizing_Claude_Code_05.1748542983427.jpg)
+![img](./08e-cc-parallel.assets/3.jpg)
 
 这个提示告诉 Claude：
 
@@ -36,11 +36,11 @@ Git 工作树是这个工作流程的完美工具。*Git* 的 worktree 机制允
 - 使用 `$ARGUMENTS` 作为动态值的占位符
 - 使用 `/project:filename argument` 运行
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542985%2F10_-_005_-_Parallelizing_Claude_Code_09.1748542984846.jpg)
+![img](./08e-cc-parallel.assets/4.jpg)
 
 ## 并行开发工作流
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542985%2F10_-_005_-_Parallelizing_Claude_Code_15.1748542985281.jpg)
+![img](./08e-cc-parallel.assets/5.jpg)
 
 这里是一个典型的并行开发会话的工作方式：
 
@@ -62,7 +62,7 @@ Git 工作树是这个工作流程的完美工具。*Git* 的 worktree 机制允
 
 Claude 甚至能够智能处理合并冲突，理解来自不同分支的变更上下文，并适当地解决它们。
 
-![img](./08e-cc-parallel.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542985%2F10_-_005_-_Parallelizing_Claude_Code_16.1748542985628.jpg)
+![img](./08e-cc-parallel.assets/6.jpg)
 
 ## 扩展您的开发
 

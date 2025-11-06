@@ -12,7 +12,7 @@ mcp dev mcp_server.py
 
 这将在端口 6277 上启动一个开发服务器，并提供一个本地 URL 供您在浏览器中打开。检查器界面将加载，显示 MCP 检查器仪表板。
 
-![img](./07e-inspector.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542727%2F09_-_005_-_The_Server_Inspector_05.1748542726831.jpg)
+![img](./07e-inspector.assets/1.jpg)
 
 MCP 检查器正在积极开发中，因此您看到的界面可能与当前截图有所不同。但是，用于测试工具、资源和提示的核心功能应该保持相似。
 
@@ -28,13 +28,13 @@ MCP 检查器正在积极开发中，因此您看到的界面可能与当前截�
 - 填写所需参数
 - 点击"运行工具"来执行并查看结果
 
-![img](./07e-inspector.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542728%2F09_-_005_-_The_Server_Inspector_09.1748542727826.jpg)
+![img](./07e-inspector.assets/2.jpg)
 
 ## 测试文档操作
 
 例如，要测试一个文档阅读工具，你需要输入一个文档 ID（如"deposition.md"），然后运行该工具。检查器会显示结果，包括返回的内容或成功消息。
 
-![img](./07e-inspector.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542728%2F09_-_005_-_The_Server_Inspector_17.1748542728249.jpg)
+![img](./07e-inspector.assets/3.jpg)
 
 您可以串联操作以验证功能。例如，在通过替换文本编辑文档后，您可以立即再次运行读取工具以确认更改是否已正确应用。
 

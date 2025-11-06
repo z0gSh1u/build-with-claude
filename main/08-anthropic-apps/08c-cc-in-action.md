@@ -20,7 +20,7 @@ Claude 将其所学的一切总结在一个名为 `CLAUDE.md` 的特殊文件中
 
 当您将其视为一种效率倍增器时，Claude 表现最佳。您提供的上下文和结构越多，结果就越好。以下是最高效的工作流程：
 
-![img](./08c-cc-in-action.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542929%2F10_-_003_-_Claude_Code_in_Action_11.1748542928969.jpg)
+![img](./08c-cc-in-action.assets/1.jpg)
 
 ### 步骤 1：将上下文输入 Claude
 
@@ -55,7 +55,7 @@ Claude 将其所学的一切总结在一个名为 `CLAUDE.md` 的特殊文件中
 > Plan to implement document_path_to_markdown tool:
 1. Create a function that:
    - Takes a file path parameter
-   - Validates the file exists  
+   - Validates the file exists
    - Determines file type from extension
    - Reads binary data from file
    - Leverages existing binary_document_to_markdown function
@@ -77,10 +77,3 @@ Claude 将创建该函数、更新必要的文件、编写测试，甚至运行�
 - `#` - 向您的 CLAUDE.md 文件添加笔记
 
 使用 Claude Code 的关键在于记住它被设计为协作伙伴，而不仅仅是代码生成器。你提供的上下文和结构越多，Claude 就能越有效地帮助你构建和维护项目。
-
-
-
-
-
-
-

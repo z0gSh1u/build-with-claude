@@ -14,7 +14,7 @@
 
 ## 实际案例：自动化质量保证测试
 
-![img](./08g-cua.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748543022%2F10_-_007_-_Computer_Use_16.1748543022490.jpg)
+![img](./08g-cua.assets/1.jpg)
 
 ```
 Your goal is to conduct QA testing on a React component hosted at https://test-mentioner.vercel.app/
@@ -54,4 +54,3 @@ Claude 按照您的指示一步步操作，截取屏幕截图，点击元素，�
 计算机使用在沙盒环境中运行以确保安全。浏览器和桌面环境在 Docker 容器内运行，完全与您的系统隔离。这意味着 Claude 可以与网络应用程序交互并测试接口，而不会对您的个人文件或系统安全造成任何风险。
 
 这种隔离至关重要，因为它允许您授予 Claude 广泛的权限与应用程序交互，同时保持对其可以和不可以访问内容的完全控制。
-

@@ -2,7 +2,7 @@
 
 Claude Code 远不止在编辑器中编写代码。它可以监控您已部署的应用程序，检测生产环境中的错误，甚至自动修复它们。这创建了一个强大的工作流程，Claude 充当您的自动化调试助手，捕捉仅在生产环境中出现的问题。
 
-![img](./08f-cua-auto-debug.assets/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1748542967%2F10_-_006_-_Automated_Debugging_00.1748542967081.jpg)
+![img](./08f-cua-auto-debug.assets/1.jpg)
 
 ## 自动错误检测与修复
 
@@ -44,4 +44,3 @@ GitHub Action 需要多个组件才能有效运行：
 - 为关键问题设置通知
 
 关键在于 Claude Code 能够理解您应用程序的上下文，智能分析生产环境中的错误，并提出考虑环境特定差异的修复方案。这使调试从被动、手动的过程转变为主动、自动化的系统，确保您的应用程序平稳运行。
-
