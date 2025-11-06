@@ -83,7 +83,7 @@
 - [代码执行与文件 API](06-claude-features/06h-code-exec-and-files-api.md)
 - [小测验](06-claude-features/06i-quiz.md)
 
-# 模型上下文协议
+# 模型上下文协议（MCP）
 
 - [模型上下文协议介绍](07-mcp/07a-introduce.md)
 - [MCP 客户端](07-mcp/07b-client.md)
