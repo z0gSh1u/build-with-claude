@@ -65,7 +65,7 @@
 - [文本嵌入](05-rag/05c-text-embedding.md)
 - [完整的 RAG 流程](05-rag/05d-rag-flow.md)
 - [实现 RAG 流程](05-rag/05e-implement-rag-flow.md)
-- [BM25 语义搜索](05-rag/05f-bm25-lexical-search.md)
+- [BM25 词法搜索](05-rag/05f-bm25-lexical-search.md)
 - [多索引 RAG](05-rag/05g-multi-index-rag.md)
 - [重排序](05-rag/05h-rerank.md)
 - [上下文检索](05-rag/05i-contextual-retrieval.md)
