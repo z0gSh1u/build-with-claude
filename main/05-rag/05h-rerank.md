@@ -1,98 +1,93 @@
 # 05h - 重排序
 
-我们构建的混合检索方法运行良好，但仍存在一些弱点。当搜索"工程团队如何处理 INC-2023-Q4-011？"时，我们可能会期望软件工程部分排名更高，因为它特别提到了工程团队和事件。然而，当前系统仍然首先返回网络安全部分。
+我们构建的混合检索方法已经不错，但仍存在一些问题：当搜索“工程团队如何处理 INC-2023-Q4-011？”时，我们期望软件工程部分排名更高，因为它特别提到了“工程团队”和“事件”；然而当前系统仍首先返回网络安全部分。
 
-这就是重排序发挥作用的地方——一种通过增加另一个后处理步骤来提高检索准确性的技术。
+重排序（Rerank）是一种通过增加另一个后处理步骤来提高检索准确性的技术，我们将使用它来解决这个问题。
 
 ## 如何工作
 
-重新排序在概念上很简单。在运行你的向量索引和 BM25 索引并将结果合并后，你添加了一个额外的步骤：一个使用 Claude 智能重新排序你搜索结果的重新排序器。
+在运行我们的向量检索和 BM25 检索并将结果合并后，重排序添加了一个额外步骤：使用 Claude 智能地重新排序搜索结果。
 
 ![img](05h-rerank.assets/1.jpg)
 
-这个过程是这样的：
+具体过程是这样的：
 
-- 取自你混合搜索的合并结果
-- 将它们连同用户原始问题一起发送给 Claude
+- 提取混合检索的合并结果
+- 将它们连同用户的原始问题一起发送给 Claude
 - 要求 Claude 按相关性递减的顺序返回最相关的文档
-- 使用 Claude 重新排序的列表作为你的最终结果
+- 将 Claude 重新排序后的列表作为最终结果
 
-提示结构很简单。你向 Claude 提供用户的问题以及所有看似相关的文档，然后要求一个简单的任务：
+提示词结构很简单，就是向 Claude 提供用户问题以及所有可能相关的文档，然后要求完成一个任务：
 
 ```
-You are tasked with finding the documents most relevant to a user's question.
+你的任务是找到与用户问题最相关的文档。
 
 <user_question>
 What happened with INC-2023-Q4-011?
 </user_question>
 
-Here are documents that may be relevant:
+这里是一些可能相关的文件文档
 <documents>
-<document>Section 10...</document>
-<document>Section 2...</document>
-<document>Section 7...</document>
-<document>Section 6...</document>
+  <document>Section 10...</document>
+  <document>Section 2...</document>
+  <document>Section 7...</document>
+  <document>Section 6...</document>
 </documents>
 
-Return the 3 most relevant docs, in order of decreasing relevance.
+返回按相关性降序排列的前3份最相关的文档。
 ```
 
 ## 效率
 
-在实现重排序时有一个重要的效率考虑。如果你让 Claude 返回每个相关片段的完整文本，你实际上是在要求它将大量文本复制回给你。这是浪费且慢的。更好的方法是事先为每个文本片段分配一个唯一 ID，然后让 Claude 只按正确顺序返回这些 ID：
+在实现重排序时，如果让 Claude 返回每个相关片段的完整文本，是慢而且浪费的。更好的方法是事先为每个文本片段分配一个 ID，然后让 Claude 按顺序返回这些 ID：
 
 ```
 <documents>
-<document>
-<id>ab84</id>
-<content>Section 10...</content>
-</document>
-<document>
-<id>51n3</id>
-<content>Section 8...</content>
-</document>
+  <document>
+    <id>ab84</id>
+    <content>Section 10...</content>
+  </document>
+  <document>
+    <id>51n3</id>
+    <content>Section 8...</content>
+  </document>
 </documents>
 ```
 
-Claude 然后可以返回一个简单的列表，如 `["1p5g", "51n3", "ab83"]` ，而不是复制整个文本块。
+Claude 返回一个简单的列表，如 `["1p5g", "51n3", "ab83"]` ，而不是复制整个文本块。
 
 ## 实现
 
-重排序函数在初始混合搜索完成后由您的检索器自动调用。这是基本结构：
+重排序函数在混合检索完成后由 `Retriever` 自动调用：
 
 ````python
 def reranker_fn(docs, query_text, k):
-    # Format documents with IDs
+    # 组装文档，分配 ID
     joined_docs = "\n".join([
         f"""
         <document>
-        <document_id>{doc["id"]}</document_id>
-        <document_content>{doc["content"]}</document_content>
+          <document_id>{doc["id"]}</document_id>
+          <document_content>{doc["content"]}</document_content>
         </document>
         """
         for doc in docs
     ])
-
-    # Create prompt and get Claude's response
+    # 组装 Prompt
     prompt = f"""..."""
     messages = []
     add_user_message(messages, prompt)
     add_assistant_message(messages, """```json""")
-
+    # 处理结果
     result = chat(messages, stop_sequences=["""```"""])
-
+    
     return json.loads(result["text"])["document_ids"]
 ````
 
-## 结果
-
-在用“what did the eng team do with INC-2023-Q4-011?”测试重新排序方法时，软件工程部分现在出现在结果的第一位。Claude 成功识别出用户的查询特别关注工程团队及其与事件的关系。
-
 ## 权衡
 
-重新排序伴随着明显的权衡：
+重排序的使用伴随着权衡：
 
-- 延迟增加：现在您必须等待额外的 API 调用以获取 Claude 的响应
-- 准确度提高：Claude 能够以纯向量相似性无法做到的方式理解上下文和相关性
+- 延迟增加：需要等待额外的 Claude 调用
+- 准确度提高：Claude 能够进一步理解上下文和相关性，这是向量相似性等检索方法不易做到的
 
-对于大多数应用来说，准确度的提升值得延迟的成本，尤其是在处理复杂查询时，语义理解比纯关键词匹配更重要。
+对于大多数应用来说，增加的延迟比起提升的准确度来说是值得的，尤其是在处理复杂的查询时，语义理解比纯关键词匹配更重要。
