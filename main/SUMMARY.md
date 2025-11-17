@@ -94,7 +94,7 @@
 - [定义资源](07-mcp/07g-define-resource.md)
 - [访问资源](07-mcp/07h-access-resource.md)
 - [定义提示词](07-mcp/07i-define-prompt.md)
-- [客户端中的提示词](07-mcp/07j-prompt-in-client.md)
+- [使用提示词](07-mcp/07j-prompt-in-client.md)
 - [回顾](07-mcp/07k-review.md)
 - [小测验](07-mcp/07l-quiz.md)
 
