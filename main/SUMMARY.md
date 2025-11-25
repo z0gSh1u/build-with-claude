@@ -105,7 +105,7 @@
 - [Claude Code 实践](08-anthropic-apps/08c-cc-in-action.md)
 - [Claude Code 与 MCP](08-anthropic-apps/08d-cc-mcp.md)
 - [Claude Code 并行](08-anthropic-apps/08e-cc-parallel.md)
-- [Computer Use 自动调试](08-anthropic-apps/08f-cua-auto-debug.md)
+- [Claude Code 自动调试](08-anthropic-apps/08f-cc-auto-debug.md)
 - [Computer Use 简介](08-anthropic-apps/08g-cua.md)
 - [Computer Use 原理](08-anthropic-apps/08h-cua-how.md)
 - [小测验](08-anthropic-apps/08i-quiz.md)
