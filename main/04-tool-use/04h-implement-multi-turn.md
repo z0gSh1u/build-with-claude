@@ -54,7 +54,7 @@ def run_tools(message):
         tool_result_blocks.append(tool_result_block) # 添加结果块
 ```
 
-本节的代码实现在 [04h.ipynb](./04h.ipynb)。
+本节的代码实现在 [04h.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/04h.ipynb)。
 
 总的来说，完整的带工具调用的多轮对话流程如下：
 
@@ -65,4 +65,3 @@ def run_tools(message):
 - 重复直到 Claude 提供最终答案
 
 这让 Claude 可以在多次来回中使用多个工具来全面回答用户问题。对话历史保留了完整上下文，允许 Claude 基于前序工具调用结果继续组织响应，以提供更全面的回答。
-

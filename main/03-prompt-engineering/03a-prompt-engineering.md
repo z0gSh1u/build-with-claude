@@ -30,7 +30,7 @@
 
 ![img](./03a-prompt-engineering.assets/3.png)
 
-本节的代码在 [03a.ipynb](./03a.ipynb)，其中提供了一个 `PromptEvaluator` 类来处理数据集生成和模型评分，用法如下：
+本节的代码在 [03a.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/03a.ipynb)，其中提供了一个 `PromptEvaluator` 类来处理数据集生成和模型评分，用法如下：
 
 ```python
 # 创建评测器

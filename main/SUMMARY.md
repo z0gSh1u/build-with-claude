@@ -2,6 +2,12 @@
 
 [前言](README.md)
 
+[课程概述](_misc/overview.md)
+
+[整理进度](_misc/progress.md)
+
+[模型比较](_misc/comparison.md)
+
 # 访问 Claude
 
 - [访问 Claude API](01-accessing-claude/01a-accessing-the-api.md)

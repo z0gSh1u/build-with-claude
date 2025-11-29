@@ -27,4 +27,4 @@ Please provide a solution to the following task:
 
 ![img](./02c-gen-test-set.assets/2.png)
 
-手工创建测试数据很辛苦，不妨使用 Haiku 等相对廉价且快速的模型来帮助我们自动生成。代码实现在 [02c.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02c.ipynb)。
+手工创建测试数据很辛苦，不妨使用 Haiku 等相对廉价且快速的模型来帮助我们自动生成。代码实现在 [02c.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02c.ipynb)。

@@ -12,7 +12,7 @@ BASE_URL="https://somewhere.com/v1"
 jupyter notebook .
 ```
 
-请结合 [01c.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01c.ipynb) 阅读后续的内容。
+请结合 [01c.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01c.ipynb) 阅读后续的内容。
 
 ## `create` 函数
 

@@ -21,7 +21,7 @@ Claude 发送回的几类事件包括：
 
 ## 使用流式响应
 
-在 `create` 函数中添加 `stream=True` 参数即可，此时返回变为 stream 而非 message。我们在 [01j.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01j.ipynb) 中实现了这部分逻辑。
+在 `create` 函数中添加 `stream=True` 参数即可，此时返回变为 stream 而非 message。我们在 [01j.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01j.ipynb) 中实现了这部分逻辑。
 
 ```python
 # 请求

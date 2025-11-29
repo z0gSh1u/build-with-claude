@@ -28,7 +28,7 @@ How far away is the Moon?
 
 ## 让 Claude 回答
 
-对每个数据记录，拼接出完整的提示词，发送给 Claude 获取响应。代码实现在 [02b.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02b.ipynb)。
+对每个数据记录，拼接出完整的提示词，发送给 Claude 获取响应。代码实现在 [02b.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02b.ipynb)。
 
 ## 通过评分器
 

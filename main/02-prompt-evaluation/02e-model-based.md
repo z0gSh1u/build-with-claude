@@ -51,4 +51,4 @@ def grade_by_model(test_case, output):
 
 关键是询问 solution 的强项、弱项，提供解释，并给出分数。不要要求打分模型直接给出分数，而不带任何前面的思考性或解释性信息，否则分数会趋于在中庸的 6 分左右徘徊。
 
-随后即可将打分器集成到提示词评估的流程中了。这部分代码实现在 [02e.ipynb](./02e.ipynb)。
+随后即可将打分器集成到提示词评估的流程中了。这部分代码实现在 [02e.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02e.ipynb)。

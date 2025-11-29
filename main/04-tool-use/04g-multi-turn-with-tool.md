@@ -35,7 +35,7 @@ def run_conversation(messages):
     return messages
 ```
 
-本节的代码在 [04g.ipynb](./04g.ipynb)，我们再次更新了其中的 `add_user_message` 和 `add_assistant_message`，来正确处理带工具调用和工具结果的消息。具体地，我们需要如下基建：
+本节的代码在 [04g.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/04g.ipynb)，我们再次更新了其中的 `add_user_message` 和 `add_assistant_message`，来正确处理带工具调用和工具结果的消息。具体地，我们需要如下基建：
 
 - 可以处理不同消息格式的辅助函数
 - `chat` 函数可以接收和传递工具 Schema

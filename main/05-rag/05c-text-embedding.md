@@ -26,7 +26,7 @@ Anthropic 目前不提供 Embedding 服务，这里使用 VoyageAI 来演示，�
 VOYAGE_API_KEY="your_key_here"
 ```
 
-本节代码实现在 [05c.ipynb](./05c.ipynb)，核心代码如下：
+本节代码实现在 [05c.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/05c.ipynb)，核心代码如下：
 
 ```python
 import voyageai

@@ -32,7 +32,7 @@
 
 ## 实现示例
 
-本节的相关代码实现在 [05i.ipynb](./05i.ipynb)，关键代码如下：
+本节的相关代码实现在 [05i.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/05i.ipynb)，关键代码如下：
 
 ```python
 def add_context(text_chunk, source_text):
@@ -75,4 +75,3 @@ for i, chunk in enumerate(chunks):
 当使用上下文检索时，结果将包括生成的补充上下文和原始的片段。例如，一个上下文化的片段可能像：“这个片段是年度跨学科研究综述的第 2 部分，详细介绍了在 XX 项目中，为解决稳定性问题而做的软件工程方面的工作…”，然后是原始文本块。
 
 这种技术在处理复杂文档时特别有价值。补充的上下文有助于检索系统更好地理解每个片段的内容以及它与更广泛的文档的关系，有助于在搜索查询与片段的原始文本不完全匹配的情况下也能检索到相关片段。
-

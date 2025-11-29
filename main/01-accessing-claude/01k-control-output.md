@@ -45,4 +45,4 @@ answer = chat(messages, stop_sequences=["5"])
 - 让回复采取特定立场
 - 结构化输出：结合这两种技术来生成符合特定模板的回应
 
-其中结构化输出是非常重要的能力，我们将在后面的内容中讨论。本节的内容在 [01k.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01k.ipynb) 中实现。
+其中结构化输出是非常重要的能力，我们将在后面的内容中讨论。本节的内容在 [01k.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01k.ipynb) 中实现。

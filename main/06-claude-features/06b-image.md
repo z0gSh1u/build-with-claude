@@ -64,7 +64,7 @@ add_user_message(messages, [
 
 ![img](./06b-image.assets/3.jpg)
 
-本节的代码在 [06b.ipynb](./06b.ipynb)。
+本节的代码在 [06b.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/06b.ipynb)。
 
 ## 另一个更真实的例子
 

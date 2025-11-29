@@ -6,7 +6,7 @@
 - run_test_case：运行单个测试用例，并打分
 - run_eval：遍历所有测试用例，协调整个测试过程
 
-本节的代码在 [02d.ipynb](./02d.ipynb)，其中我们先固定打分为 10 分来走通流程，后续会介绍打分器的具体设计。
+本节的代码在 [02d.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/02d.ipynb)，其中我们先固定打分为 10 分来走通流程，后续会介绍打分器的具体设计。
 
 ![img](02d-run-eval.assets/1.png)
 

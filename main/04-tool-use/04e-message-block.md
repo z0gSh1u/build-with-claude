@@ -48,4 +48,4 @@ Tool Use 遵循如下流程，每一步都需要仔细处理消息结构：
 
 - 从 Claude 接收最终响应
 
-本节的代码在 [04e.ipynb](./04e.ipynb)，我们更新了其中的 `add_user_message` 和 `add_assistant_message`，来正确处理多块消息。
+本节的代码在 [04e.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/04e.ipynb)，我们更新了其中的 `add_user_message` 和 `add_assistant_message`，来正确处理多块消息。

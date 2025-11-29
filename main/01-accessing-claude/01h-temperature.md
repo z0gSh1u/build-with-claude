@@ -20,4 +20,4 @@
 | 中温 0.4~0.7 | 总结文本、解决问题、有约束条件的创意写作 |
 | 高温 0.8~1.0 | 头脑风暴、营销内容、创意写作             |
 
-在 Claude SDK 中，给 `create` 函数传递 `temperature` 参数即可指定温度，目前的默认温度是 1.0。我们在 [01h.ipynb](https://nbviewer.org/github/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01h.ipynb) 中实现了对应的逻辑并比较了不同温度设定下的表现。需要注意的是，高温度并不总能保证多样的输出，例如一些绝对事实的问题仍然会倾向于产生相似的响应。
+在 Claude SDK 中，给 `create` 函数传递 `temperature` 参数即可指定温度，目前的默认温度是 1.0。我们在 [01h.ipynb](https://github.com/z0gSh1u/build-with-claude/blob/master/main/01-accessing-claude/01h.ipynb) 中实现了对应的逻辑并比较了不同温度设定下的表现。需要注意的是，高温度并不总能保证多样的输出，例如一些绝对事实的问题仍然会倾向于产生相似的响应。
